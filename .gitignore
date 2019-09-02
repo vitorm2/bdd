@@ -139,8 +139,6 @@ iOSInjectionProject/
 ### SwiftPackageManager ###
 Packages
 xcuserdata
-*.xcodeproj
-
 
 ### VisualStudioCode ###
 .vscode/*
