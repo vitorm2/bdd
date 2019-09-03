@@ -16,6 +16,7 @@
 		1F5DB735231D8E8800BC757A /* BDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB734231D8E8800BC757A /* BDDTests.swift */; };
 		2EF3BDE131053A4AECEFE3A8 /* Pods_BDDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A449BF0355EE0685533514 /* Pods_BDDTests.framework */; };
 		439C679157038F283864360C /* Pods_BDD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634069FF62D9333518C33E5B /* Pods_BDD.framework */; };
+		AC8AC074231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AC073231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift */; };
 		AC9A77AF231D956900DCC43B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77AE231D956900DCC43B /* Coordinator.swift */; };
 		AC9A77B1231D963900DCC43B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */; };
 		AC9A77B3231D96B900DCC43B /* NewConsultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B2231D96B900DCC43B /* NewConsultCoordinator.swift */; };
@@ -67,6 +68,7 @@
 		77E7C30DF34B0530DDFC546A /* Pods-BDDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDUITests.debug.xcconfig"; path = "Target Support Files/Pods-BDDUITests/Pods-BDDUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		783928DF96E14D31A715431A /* Pods_BDDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BDDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEDAD0D17E5C732BC2765D4 /* Pods-BDDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDTests.debug.xcconfig"; path = "Target Support Files/Pods-BDDTests/Pods-BDDTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC8AC073231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCurrencyCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC9A77AE231D956900DCC43B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		AC9A77B2231D96B900DCC43B /* NewConsultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultCoordinator.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				1F5DB70E231D8A4500BC757A /* ViewController.swift */,
 				1F5DB710231D8A4500BC757A /* Main.storyboard */,
+				AC8AC073231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift */,
 				CF43961F231EE9F3007F89F4 /* SelectCurrencyController.swift */,
 				CF43961D231EE9E4007F89F4 /* SelectCurrency.storyboard */,
 				CF439621231EEBE8007F89F4 /* CurrencyCell.swift */,
@@ -510,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F5DB70F231D8A4500BC757A /* ViewController.swift in Sources */,
+				AC8AC074231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift in Sources */,
 				1F5DB70D231D8A4500BC757A /* AppDelegate.swift in Sources */,
 				CF439620231EE9F3007F89F4 /* SelectCurrencyController.swift in Sources */,
 				AC9A77B7231D9C3100DCC43B /* NewConsultPresenter.swift in Sources */,
@@ -694,7 +698,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 572YF9FD67;
+				DEVELOPMENT_TEAM = T8DRW4Z2F2;
 				INFOPLIST_FILE = BDD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -713,7 +717,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 572YF9FD67;
+				DEVELOPMENT_TEAM = T8DRW4Z2F2;
 				INFOPLIST_FILE = BDD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
