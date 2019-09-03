@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NewConsultViewController: UIViewController {
 
     @IBOutlet weak var stockField: UITextField! {
         didSet { stockField?.addDoneToolbar() }
@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         didSet { quantityField?.addDoneToolbar() }
     }
     @IBOutlet weak var selectedCurrenciesCollection: UICollectionView!
+    weak var delegate: NewConsultViewControllerDelegate?
     var selectedCurrencies: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,19 +32,14 @@ class ViewController: UIViewController {
         quantityField.layer.cornerRadius = 8
         quantityField.text = "1"
         //NavigationController
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.07058823529, green: 0.07843137255, blue: 0.1294117647, alpha: 1)
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationItem.title = "Consult"
-        self.navigationController?.navigationBar.largeTitleTextAttributes =
-            [NSAttributedString.Key.foregroundColor: UIColor(cgColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))]
         //CollectionView
         self.selectedCurrenciesCollection.delegate = self
         self.selectedCurrenciesCollection.dataSource = self
     }
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension NewConsultViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
@@ -76,7 +72,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            print("Selected")
+            self.delegate?.newConsultViewController(self)
     }
 }
 
