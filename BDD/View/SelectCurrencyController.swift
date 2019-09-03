@@ -24,18 +24,14 @@ class SelectCurrencyController: UIViewController {
         self.navigationItem.title = "Select Currency"
         let backItem = UIBarButtonItem()
         backItem.title = "Back"
-        backItem.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         let rightButton = UIBarButtonItem()
         rightButton.title = "Ok"
-        rightButton.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         self.navigationItem.backBarButtonItem = backItem
         self.navigationItem.rightBarButtonItem = rightButton
-        self.navigationController?.navigationBar.tintColor = UIColor.white
         currencyCollectionView.delegate = self
         currencyCollectionView.dataSource = self
     }
 }
-
 
 extension SelectCurrencyController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

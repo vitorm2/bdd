@@ -9,7 +9,6 @@
 import UIKit
 
 class NewConsultViewController: UIViewController {
-
     @IBOutlet weak var stockField: UITextField! {
         didSet { stockField?.addDoneToolbar() }
     }
