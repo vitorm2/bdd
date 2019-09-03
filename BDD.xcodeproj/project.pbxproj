@@ -14,6 +14,11 @@
 		1F5DB717231D8A4600BC757A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DB715231D8A4600BC757A /* LaunchScreen.storyboard */; };
 		1F5DB727231D8E7E00BC757A /* BDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB726231D8E7E00BC757A /* BDDUITests.swift */; };
 		1F5DB735231D8E8800BC757A /* BDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB734231D8E8800BC757A /* BDDTests.swift */; };
+		1F5DB73E231DA5CA00BC757A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB73D231DA5CA00BC757A /* API.swift */; };
+		1F5DB740231DA60500BC757A /* CodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB73F231DA60500BC757A /* CodableExtension.swift */; };
+		1F5DB742231DA65F00BC757A /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB741231DA65F00BC757A /* Tools.swift */; };
+		1FDBAF68231EF2EE00DE0320 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBAF67231EF2EE00DE0320 /* Stock.swift */; };
+		1FDBAF6A231EF31E00DE0320 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBAF69231EF31E00DE0320 /* Response.swift */; };
 		2EF3BDE131053A4AECEFE3A8 /* Pods_BDDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A449BF0355EE0685533514 /* Pods_BDDTests.framework */; };
 		439C679157038F283864360C /* Pods_BDD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634069FF62D9333518C33E5B /* Pods_BDD.framework */; };
 		AC9A77AF231D956900DCC43B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77AE231D956900DCC43B /* Coordinator.swift */; };
@@ -55,6 +60,11 @@
 		1F5DB732231D8E8700BC757A /* BDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5DB734231D8E8800BC757A /* BDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDDTests.swift; sourceTree = "<group>"; };
 		1F5DB736231D8E8800BC757A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F5DB73D231DA5CA00BC757A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		1F5DB73F231DA60500BC757A /* CodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtension.swift; sourceTree = "<group>"; };
+		1F5DB741231DA65F00BC757A /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		1FDBAF67231EF2EE00DE0320 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		1FDBAF69231EF31E00DE0320 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		2F7E7B75FFA9D2B49DE1CC5C /* Pods-BDDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDUITests.release.xcconfig"; path = "Target Support Files/Pods-BDDUITests/Pods-BDDUITests.release.xcconfig"; sourceTree = "<group>"; };
 		41385A36BEECE5C8664A840C /* Pods-BDD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDD.release.xcconfig"; path = "Target Support Files/Pods-BDD/Pods-BDD.release.xcconfig"; sourceTree = "<group>"; };
 		5940EE30EED744C968FC98F9 /* Pods-BDD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDD.debug.xcconfig"; path = "Target Support Files/Pods-BDD/Pods-BDD.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +134,7 @@
 		1F5DB70B231D8A4500BC757A /* BDD */ = {
 			isa = PBXGroup;
 			children = (
+				1F5DB73C231DA5B700BC757A /* Helper */,
 				1F5DB70C231D8A4500BC757A /* AppDelegate.swift */,
 				AC9A77B4231D9AB700DCC43B /* Coordinator */,
 				AC9A77BB231D9CAC00DCC43B /* Model */,
@@ -151,6 +162,16 @@
 				1F5DB736231D8E8800BC757A /* Info.plist */,
 			);
 			path = BDDTests;
+			sourceTree = "<group>";
+		};
+		1F5DB73C231DA5B700BC757A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1F5DB73D231DA5CA00BC757A /* API.swift */,
+				1F5DB73F231DA60500BC757A /* CodableExtension.swift */,
+				1F5DB741231DA65F00BC757A /* Tools.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		373D71C7A9B966E177D5F577 /* Frameworks */ = {
@@ -208,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				AC9A77B9231D9C8F00DCC43B /* Currency.swift */,
+				1FDBAF67231EF2EE00DE0320 /* Stock.swift */,
+				1FDBAF69231EF31E00DE0320 /* Response.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -491,9 +514,14 @@
 				1F5DB70D231D8A4500BC757A /* AppDelegate.swift in Sources */,
 				AC9A77B7231D9C3100DCC43B /* NewConsultPresenter.swift in Sources */,
 				AC9A77B3231D96B900DCC43B /* NewConsultCoordinator.swift in Sources */,
+				1FDBAF6A231EF31E00DE0320 /* Response.swift in Sources */,
 				AC9A77AF231D956900DCC43B /* Coordinator.swift in Sources */,
+				1F5DB740231DA60500BC757A /* CodableExtension.swift in Sources */,
 				AC9A77BA231D9C8F00DCC43B /* Currency.swift in Sources */,
+				1F5DB73E231DA5CA00BC757A /* API.swift in Sources */,
 				AC9A77B1231D963900DCC43B /* ApplicationCoordinator.swift in Sources */,
+				1FDBAF68231EF2EE00DE0320 /* Stock.swift in Sources */,
+				1F5DB742231DA65F00BC757A /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

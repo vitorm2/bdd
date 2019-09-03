@@ -13,5 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        API<Currency>.forex(params: "").request { [] result in
+//            print(result)
+//            guard case .success(let stocks) = result else {
+//                return
+//            }
+//        }
     }
 }
