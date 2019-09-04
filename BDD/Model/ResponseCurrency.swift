@@ -1,18 +1,18 @@
 //
-//  Currency.swift
+//  ResponseCurrency.swift
 //  BDD
 //
-//  Created by Alexandre Scheer Bing on 02/09/19.
+//  Created by Vitor Demenighi on 04/09/19.
 //  Copyright © 2019 LeonardoBSR. All rights reserved.
 //
 
 import Foundation
 
-struct Currency: Codable {
+struct ResponseCurrency: Codable {
     let symbolsReturned: Int?
     let symbolsRequested: Int?
     let base: String?
-    let data: [String : String]?
+    let data: [Currency]?
     enum CodingKeys: String, CodingKey {
         case symbolsRequested = "symbols_requested"
         case symbolsReturned = "symbols_returned"

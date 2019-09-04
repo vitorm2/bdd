@@ -10,12 +10,12 @@ import Foundation
 
 // MARK: - Stock
 struct Stock: Codable {
-    let symbol, name, currency, price: String
-    let priceOpen, dayHigh, dayLow, theWeekHigh: String
-    let theWeekLow, dayChange, changePct, closeYesterday: String
-    let marketCap, volume, volumeAvg, shares: String
-    let stockExchangeLong, stockExchangeShort, timezone, timezoneName: String
-    let gmtOffset, lastTradeTime: String
+    let symbol, name, currency, price: String?
+    let priceOpen, dayHigh, dayLow, theWeekHigh: String?
+    let theWeekLow, dayChange, changePct, closeYesterday: String?
+    let marketCap, volume, volumeAvg, shares: String?
+    let stockExchangeLong, stockExchangeShort, timezone, timezoneName: String?
+    let gmtOffset, lastTradeTime: String?
     enum CodingKeys: String, CodingKey {
         case symbol, name, currency, price
         case priceOpen = "price_open"

@@ -33,6 +33,13 @@
 		CF439620231EE9F3007F89F4 /* SelectCurrencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF43961F231EE9F3007F89F4 /* SelectCurrencyController.swift */; };
 		CF439622231EEBE8007F89F4 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF439621231EEBE8007F89F4 /* CurrencyCell.swift */; };
 		CFC42263231F0F3400AB273F /* Sarabun-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFC42262231F0F3400AB273F /* Sarabun-Medium.ttf */; };
+		CFF7363A232044990004F845 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBAF67231EF2EE00DE0320 /* Stock.swift */; };
+		CFF7363C23204A460004F845 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = CFF7363B23204A460004F845 /* response.json */; };
+		CFF7363D23204A800004F845 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBAF69231EF31E00DE0320 /* Response.swift */; };
+		CFF7363E23204C8A0004F845 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = CFF7363B23204A460004F845 /* response.json */; };
+		CFF7364123204E330004F845 /* responseCurrency.json in Resources */ = {isa = PBXBuildFile; fileRef = CFF7364023204E330004F845 /* responseCurrency.json */; };
+		CFF7364223204E330004F845 /* responseCurrency.json in Resources */ = {isa = PBXBuildFile; fileRef = CFF7364023204E330004F845 /* responseCurrency.json */; };
+		CFF7364323204E540004F845 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B9231D9C8F00DCC43B /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +97,8 @@
 		CF43961F231EE9F3007F89F4 /* SelectCurrencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyController.swift; sourceTree = "<group>"; };
 		CF439621231EEBE8007F89F4 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		CFC42262231F0F3400AB273F /* Sarabun-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarabun-Medium.ttf"; sourceTree = "<group>"; };
+		CFF7363B23204A460004F845 /* response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
+		CFF7364023204E330004F845 /* responseCurrency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = responseCurrency.json; sourceTree = "<group>"; };
 		F0A449BF0355EE0685533514 /* Pods_BDDTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BDDTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -171,6 +180,8 @@
 		1F5DB733231D8E8800BC757A /* BDDTests */ = {
 			isa = PBXGroup;
 			children = (
+				CFF7363B23204A460004F845 /* response.json */,
+				CFF7364023204E330004F845 /* responseCurrency.json */,
 				1F5DB734231D8E8800BC757A /* BDDTests.swift */,
 				1F5DB736231D8E8800BC757A /* Info.plist */,
 			);
@@ -372,10 +383,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF7364123204E330004F845 /* responseCurrency.json in Resources */,
 				1F5DB717231D8A4600BC757A /* LaunchScreen.storyboard in Resources */,
 				1F5DB714231D8A4600BC757A /* Assets.xcassets in Resources */,
 				1F5DB712231D8A4500BC757A /* NewConsult.storyboard in Resources */,
 				CFC42263231F0F3400AB273F /* Sarabun-Medium.ttf in Resources */,
+				CFF7363E23204C8A0004F845 /* response.json in Resources */,
 				CF43961E231EE9E4007F89F4 /* SelectCurrency.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +404,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF7363C23204A460004F845 /* response.json in Resources */,
+				CFF7364223204E330004F845 /* responseCurrency.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +584,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF7364323204E540004F845 /* Currency.swift in Sources */,
+				CFF7363A232044990004F845 /* Stock.swift in Sources */,
+				CFF7363D23204A800004F845 /* Response.swift in Sources */,
 				1F5DB735231D8E8800BC757A /* BDDTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,7 +748,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T8DRW4Z2F2;
+				DEVELOPMENT_TEAM = 572YF9FD67;
 				INFOPLIST_FILE = BDD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -749,7 +767,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T8DRW4Z2F2;
+				DEVELOPMENT_TEAM = 572YF9FD67;
 				INFOPLIST_FILE = BDD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -808,7 +826,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MC7C9J5LVA;
+				DEVELOPMENT_TEAM = 572YF9FD67;
 				INFOPLIST_FILE = BDDTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -829,7 +847,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MC7C9J5LVA;
+				DEVELOPMENT_TEAM = 572YF9FD67;
 				INFOPLIST_FILE = BDDTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -10,10 +10,10 @@ import Foundation
 
 // MARK: - Response
 struct Response: Codable {
-    let symbolsReturned: Int
+    let symbolsReturned: Int?
     let symbolsRequested: Int?
     let base: String?
-    let data: [Stock?]
+    let data: [Stock?]?
     enum CodingKeys: String, CodingKey {
         case symbolsRequested = "symbols_requested"
         case symbolsReturned = "symbols_returned"
