@@ -12,12 +12,27 @@ import UIKit
 
 class NewConsultCoordinator: Coordinator {
     private var presenter: UINavigationController
+    private var selectCurrencyCoordinator: SelectCurrencyCoordinator?
     init(presenter: UINavigationController) {
         self.presenter = presenter
     }
     func start() {
-        let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main")
-            as? ViewController
-        presenter.setViewControllers([mainVC!], animated: true)
+        if let mainVC = UIStoryboard(name: "NewConsult", bundle: nil).instantiateViewController(withIdentifier: "NewConsult")
+            as? NewConsultViewController {
+            mainVC.delegate = self
+            presenter.setViewControllers([mainVC], animated: true)
+        }
     }
+}
+
+extension NewConsultCoordinator: NewConsultViewControllerDelegate {
+    func newConsultViewController(_ controller: NewConsultViewController) {
+        let selectCurrencyCoordinator = SelectCurrencyCoordinator(presenter: presenter)
+        self.selectCurrencyCoordinator = selectCurrencyCoordinator
+        selectCurrencyCoordinator.start()
+    }
+}
+
+protocol NewConsultViewControllerDelegate: class {
+    func newConsultViewController(_ controller: NewConsultViewController/*, didSelect movie: Movie*/)
 }

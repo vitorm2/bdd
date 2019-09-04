@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F5DB70D231D8A4500BC757A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB70C231D8A4500BC757A /* AppDelegate.swift */; };
-		1F5DB70F231D8A4500BC757A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB70E231D8A4500BC757A /* ViewController.swift */; };
-		1F5DB712231D8A4500BC757A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DB710231D8A4500BC757A /* Main.storyboard */; };
+		1F5DB70F231D8A4500BC757A /* NewConsultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB70E231D8A4500BC757A /* NewConsultViewController.swift */; };
+		1F5DB712231D8A4500BC757A /* NewConsult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DB710231D8A4500BC757A /* NewConsult.storyboard */; };
 		1F5DB714231D8A4600BC757A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DB713231D8A4600BC757A /* Assets.xcassets */; };
 		1F5DB717231D8A4600BC757A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DB715231D8A4600BC757A /* LaunchScreen.storyboard */; };
 		1F5DB727231D8E7E00BC757A /* BDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB726231D8E7E00BC757A /* BDDUITests.swift */; };
@@ -21,12 +21,18 @@
 		1FDBAF6A231EF31E00DE0320 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDBAF69231EF31E00DE0320 /* Response.swift */; };
 		2EF3BDE131053A4AECEFE3A8 /* Pods_BDDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A449BF0355EE0685533514 /* Pods_BDDTests.framework */; };
 		439C679157038F283864360C /* Pods_BDD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634069FF62D9333518C33E5B /* Pods_BDD.framework */; };
+		AC38C6BC231F13E400653E40 /* SelectCurrencyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */; };
+		AC8AC074231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AC073231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift */; };
 		AC9A77AF231D956900DCC43B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77AE231D956900DCC43B /* Coordinator.swift */; };
 		AC9A77B1231D963900DCC43B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */; };
 		AC9A77B3231D96B900DCC43B /* NewConsultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B2231D96B900DCC43B /* NewConsultCoordinator.swift */; };
 		AC9A77B7231D9C3100DCC43B /* NewConsultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B6231D9C3100DCC43B /* NewConsultPresenter.swift */; };
 		AC9A77BA231D9C8F00DCC43B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B9231D9C8F00DCC43B /* Currency.swift */; };
 		C4CC05D4015A8B3AE30B3F78 /* Pods_BDDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783928DF96E14D31A715431A /* Pods_BDDUITests.framework */; };
+		CF43961E231EE9E4007F89F4 /* SelectCurrency.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF43961D231EE9E4007F89F4 /* SelectCurrency.storyboard */; };
+		CF439620231EE9F3007F89F4 /* SelectCurrencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF43961F231EE9F3007F89F4 /* SelectCurrencyController.swift */; };
+		CF439622231EEBE8007F89F4 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF439621231EEBE8007F89F4 /* CurrencyCell.swift */; };
+		CFC42263231F0F3400AB273F /* Sarabun-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFC42262231F0F3400AB273F /* Sarabun-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +55,8 @@
 /* Begin PBXFileReference section */
 		1F5DB709231D8A4500BC757A /* BDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5DB70C231D8A4500BC757A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F5DB70E231D8A4500BC757A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1F5DB711231D8A4500BC757A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F5DB70E231D8A4500BC757A /* NewConsultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultViewController.swift; sourceTree = "<group>"; };
+		1F5DB711231D8A4500BC757A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewConsult.storyboard; sourceTree = "<group>"; };
 		1F5DB713231D8A4600BC757A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F5DB716231D8A4600BC757A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F5DB718231D8A4600BC757A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,11 +79,17 @@
 		77E7C30DF34B0530DDFC546A /* Pods-BDDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDUITests.debug.xcconfig"; path = "Target Support Files/Pods-BDDUITests/Pods-BDDUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		783928DF96E14D31A715431A /* Pods_BDDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BDDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEDAD0D17E5C732BC2765D4 /* Pods-BDDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDTests.debug.xcconfig"; path = "Target Support Files/Pods-BDDTests/Pods-BDDTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyCoordinator.swift; sourceTree = "<group>"; };
+		AC8AC073231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCurrencyCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC9A77AE231D956900DCC43B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		AC9A77B2231D96B900DCC43B /* NewConsultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultCoordinator.swift; sourceTree = "<group>"; };
 		AC9A77B6231D9C3100DCC43B /* NewConsultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultPresenter.swift; sourceTree = "<group>"; };
 		AC9A77B9231D9C8F00DCC43B /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		CF43961D231EE9E4007F89F4 /* SelectCurrency.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCurrency.storyboard; sourceTree = "<group>"; };
+		CF43961F231EE9F3007F89F4 /* SelectCurrencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyController.swift; sourceTree = "<group>"; };
+		CF439621231EEBE8007F89F4 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		CFC42262231F0F3400AB273F /* Sarabun-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarabun-Medium.ttf"; sourceTree = "<group>"; };
 		F0A449BF0355EE0685533514 /* Pods_BDDTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BDDTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +152,7 @@
 				AC9A77BB231D9CAC00DCC43B /* Model */,
 				AC9A77B8231D9C5B00DCC43B /* Presenter */,
 				AC9A77B5231D9C0800DCC43B /* View */,
+				CFC42261231F0F1500AB273F /* fonts */,
 				1F5DB713231D8A4600BC757A /* Assets.xcassets */,
 				1F5DB718231D8A4600BC757A /* Info.plist */,
 			);
@@ -203,6 +216,7 @@
 				AC9A77AE231D956900DCC43B /* Coordinator.swift */,
 				AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */,
 				AC9A77B2231D96B900DCC43B /* NewConsultCoordinator.swift */,
+				AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -210,8 +224,12 @@
 		AC9A77B5231D9C0800DCC43B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1F5DB70E231D8A4500BC757A /* ViewController.swift */,
-				1F5DB710231D8A4500BC757A /* Main.storyboard */,
+				1F5DB70E231D8A4500BC757A /* NewConsultViewController.swift */,
+				1F5DB710231D8A4500BC757A /* NewConsult.storyboard */,
+				AC8AC073231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift */,
+				CF43961F231EE9F3007F89F4 /* SelectCurrencyController.swift */,
+				CF43961D231EE9E4007F89F4 /* SelectCurrency.storyboard */,
+				CF439621231EEBE8007F89F4 /* CurrencyCell.swift */,
 				1F5DB715231D8A4600BC757A /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -233,6 +251,14 @@
 				1FDBAF69231EF31E00DE0320 /* Response.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CFC42261231F0F1500AB273F /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CFC42262231F0F3400AB273F /* Sarabun-Medium.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,7 +374,9 @@
 			files = (
 				1F5DB717231D8A4600BC757A /* LaunchScreen.storyboard in Resources */,
 				1F5DB714231D8A4600BC757A /* Assets.xcassets in Resources */,
-				1F5DB712231D8A4500BC757A /* Main.storyboard in Resources */,
+				1F5DB712231D8A4500BC757A /* NewConsult.storyboard in Resources */,
+				CFC42263231F0F3400AB273F /* Sarabun-Medium.ttf in Resources */,
+				CF43961E231EE9E4007F89F4 /* SelectCurrency.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,13 +538,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F5DB70F231D8A4500BC757A /* ViewController.swift in Sources */,
+				1F5DB70F231D8A4500BC757A /* NewConsultViewController.swift in Sources */,
+				AC38C6BC231F13E400653E40 /* SelectCurrencyCoordinator.swift in Sources */,
+				AC8AC074231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift in Sources */,
 				1F5DB70D231D8A4500BC757A /* AppDelegate.swift in Sources */,
+				CF439620231EE9F3007F89F4 /* SelectCurrencyController.swift in Sources */,
 				AC9A77B7231D9C3100DCC43B /* NewConsultPresenter.swift in Sources */,
 				AC9A77B3231D96B900DCC43B /* NewConsultCoordinator.swift in Sources */,
 				1FDBAF6A231EF31E00DE0320 /* Response.swift in Sources */,
 				AC9A77AF231D956900DCC43B /* Coordinator.swift in Sources */,
 				1F5DB740231DA60500BC757A /* CodableExtension.swift in Sources */,
+				CF439622231EEBE8007F89F4 /* CurrencyCell.swift in Sources */,
 				AC9A77BA231D9C8F00DCC43B /* Currency.swift in Sources */,
 				1F5DB73E231DA5CA00BC757A /* API.swift in Sources */,
 				AC9A77B1231D963900DCC43B /* ApplicationCoordinator.swift in Sources */,
@@ -557,12 +589,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1F5DB710231D8A4500BC757A /* Main.storyboard */ = {
+		1F5DB710231D8A4500BC757A /* NewConsult.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1F5DB711231D8A4500BC757A /* Base */,
 			);
-			name = Main.storyboard;
+			name = NewConsult.storyboard;
 			sourceTree = "<group>";
 		};
 		1F5DB715231D8A4600BC757A /* LaunchScreen.storyboard */ = {
@@ -627,7 +659,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -682,7 +714,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -698,7 +730,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MC7C9J5LVA;
+				DEVELOPMENT_TEAM = T8DRW4Z2F2;
 				INFOPLIST_FILE = BDD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -717,7 +749,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MC7C9J5LVA;
+				DEVELOPMENT_TEAM = T8DRW4Z2F2;
 				INFOPLIST_FILE = BDD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
