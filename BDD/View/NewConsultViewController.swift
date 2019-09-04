@@ -16,11 +16,15 @@ class NewConsultViewController: UIViewController {
         didSet { quantityField?.addDoneToolbar() }
     }
     @IBOutlet weak var selectedCurrenciesCollection: UICollectionView!
+    var presenter: NewConsultPresenter?
     weak var delegate: NewConsultViewControllerDelegate?
-    var selectedCurrencies: [String] = []
+    var selectedCurrencies: [Currency] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.presenter = NewConsultPresenter()
+        self.presenter?.attachView(self)
+        //Set textinput layout
         stockField.layer.borderColor = #colorLiteral(red: 0.7254901961, green: 0.7568627451, blue: 0.8509803922, alpha: 1)
         stockField.layer.borderWidth = 1
         stockField.layer.cornerRadius = 8
@@ -35,6 +39,9 @@ class NewConsultViewController: UIViewController {
         //CollectionView
         self.selectedCurrenciesCollection.delegate = self
         self.selectedCurrenciesCollection.dataSource = self
+    }
+    @IBAction func researchButtonAction(_ sender: Any) {
+        self.presenter?.convertStockCurrency(stockCode: self.stockField.text ?? "", currencies: [], quantity: 1)
     }
 }
 
@@ -90,4 +97,14 @@ extension UITextField {
     }
     // Default actions:
     @objc func doneButtonTapped() { self.resignFirstResponder() }
+}
+
+extension NewConsultViewController: NewConsultView {
+    func updateCurrencies(currencies: [Currency]) {
+        self.selectedCurrencies = currencies
+        self.selectedCurrenciesCollection.reloadData()
+    }
+    func update(){
+        print("View updated")
+    }
 }
