@@ -21,11 +21,17 @@ class SelectCurrencyController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "Select Currency"
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        let rightButton = UIBarButtonItem()
+        rightButton.title = "Ok"
+        self.navigationItem.backBarButtonItem = backItem
+        self.navigationItem.rightBarButtonItem = rightButton
         currencyCollectionView.delegate = self
         currencyCollectionView.dataSource = self
     }
 }
-
 
 extension SelectCurrencyController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
