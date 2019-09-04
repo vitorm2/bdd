@@ -22,6 +22,7 @@
 		2EF3BDE131053A4AECEFE3A8 /* Pods_BDDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A449BF0355EE0685533514 /* Pods_BDDTests.framework */; };
 		439C679157038F283864360C /* Pods_BDD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634069FF62D9333518C33E5B /* Pods_BDD.framework */; };
 		AC38C6BC231F13E400653E40 /* SelectCurrencyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */; };
+		AC38C6BE2320329500653E40 /* NewConsultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38C6BD2320329500653E40 /* NewConsultView.swift */; };
 		AC8AC074231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AC073231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift */; };
 		AC9A77AF231D956900DCC43B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77AE231D956900DCC43B /* Coordinator.swift */; };
 		AC9A77B1231D963900DCC43B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */; };
@@ -80,6 +81,7 @@
 		783928DF96E14D31A715431A /* Pods_BDDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BDDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEDAD0D17E5C732BC2765D4 /* Pods-BDDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDTests.debug.xcconfig"; path = "Target Support Files/Pods-BDDTests/Pods-BDDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyCoordinator.swift; sourceTree = "<group>"; };
+		AC38C6BD2320329500653E40 /* NewConsultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultView.swift; sourceTree = "<group>"; };
 		AC8AC073231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCurrencyCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC9A77AE231D956900DCC43B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				1F5DB70E231D8A4500BC757A /* NewConsultViewController.swift */,
+				AC38C6BD2320329500653E40 /* NewConsultView.swift */,
 				1F5DB710231D8A4500BC757A /* NewConsult.storyboard */,
 				AC8AC073231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift */,
 				CF43961F231EE9F3007F89F4 /* SelectCurrencyController.swift */,
@@ -538,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC38C6BE2320329500653E40 /* NewConsultView.swift in Sources */,
 				1F5DB70F231D8A4500BC757A /* NewConsultViewController.swift in Sources */,
 				AC38C6BC231F13E400653E40 /* SelectCurrencyCoordinator.swift in Sources */,
 				AC8AC074231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift in Sources */,
