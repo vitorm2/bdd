@@ -102,7 +102,7 @@
 		AC9A77B6231D9C3100DCC43B /* NewConsultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultPresenter.swift; sourceTree = "<group>"; };
 		CF43961D231EE9E4007F89F4 /* SelectCurrency.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCurrency.storyboard; sourceTree = "<group>"; };
 		CF43961F231EE9F3007F89F4 /* SelectCurrencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyController.swift; sourceTree = "<group>"; };
-		CF439621231EEBE8007F89F4 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		CF439621231EEBE8007F89F4 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyCell.swift; path = ../SelectCurrencyScreen/CurrencyCell.swift; sourceTree = "<group>"; };
 		CFC42262231F0F3400AB273F /* Sarabun-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarabun-Medium.ttf"; sourceTree = "<group>"; };
 		CFF7364B2321313F0004F845 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		CFF7364D232131630004F845 /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
@@ -295,6 +295,7 @@
 		CFF73648232130EA0004F845 /* NewConsultScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CF439621231EEBE8007F89F4 /* CurrencyCell.swift */,
 				CFF73649232131040004F845 /* Cell */,
 				1F5DB710231D8A4500BC757A /* NewConsult.storyboard */,
 				1F5DB70E231D8A4500BC757A /* NewConsultViewController.swift */,
@@ -316,7 +317,6 @@
 			children = (
 				CF43961D231EE9E4007F89F4 /* SelectCurrency.storyboard */,
 				CF43961F231EE9F3007F89F4 /* SelectCurrencyController.swift */,
-				CF439621231EEBE8007F89F4 /* CurrencyCell.swift */,
 			);
 			path = SelectCurrencyScreen;
 			sourceTree = "<group>";

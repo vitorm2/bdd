@@ -20,7 +20,7 @@ class NewConsultPresenter {
         self.consultView = view
     }
 
-    func getConvertStockCurrency(stockCode: String, convertCurrency: String, quantity: Int) {
+    func getConvertStockCurrency(stockCode: String, convertCurrency: String, quantity: Double) {
         API<[Stock?]>.stock(params: stockCode).request { [weak self] result in
 
             guard let self = self,
@@ -36,10 +36,10 @@ class NewConsultPresenter {
                 guard let convertCurrencyValue = currency[convertCurrency] else { return }
 
                 // Conversao
-                let result = Double(stockPrice)! * Double(convertCurrencyValue)!
+                let result = Double(stockPrice)! * Double(convertCurrencyValue)! * quantity
 
                 let convertResult = ConvertResultViewData(stockOriginalPrice: Double(stockPrice)!,
-                                    stockConvertPrice: result, originalCurrency: stockOriginalCurrency, convertCurrency: convertCurrency)
+                                    stockConvertPrice: result, originalCurrency: stockOriginalCurrency, convertCurrency: convertCurrency, quantity: quantity)
 
                 self.consultView?.showResultScreen(result: convertResult)
             }
@@ -52,4 +52,5 @@ struct ConvertResultViewData {
     let stockConvertPrice: Double
     let originalCurrency: String
     let convertCurrency: String
+    let quantity: Double
 }

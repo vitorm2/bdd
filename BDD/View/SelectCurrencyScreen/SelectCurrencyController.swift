@@ -9,11 +9,6 @@
 
 import UIKit
 
-struct CurrencyViewData {
-    var currency: String = "Dólar - US$"
-    var selected: Bool = false
-}
-
 
 class SelectCurrencyController: UIViewController {
     @IBOutlet weak var currencyCollectionView: UICollectionView!
@@ -23,6 +18,7 @@ class SelectCurrencyController: UIViewController {
     
     weak var delegate: SelectCurrencyControllerDelegate?
     var presenter: SelectCurrencyPresenter?
+    var indexCurrencySelected: Int = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,14 +50,17 @@ class SelectCurrencyController: UIViewController {
 
 extension SelectCurrencyController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if  !currencies[indexPath.row].selected {
+        if indexPath.row != indexCurrencySelected {
             currencies[indexPath.row].selected = true
-        } else {
-            currencies[indexPath.row].selected = false
+            
+            if indexCurrencySelected != 20 {
+                currencies[indexCurrencySelected].selected = false
+            }
+            indexCurrencySelected = indexPath.row
+            collectionView.reloadData()
+            
+            currencySelected = currencies[indexPath.row]
         }
-        // SELECIONA MOEDA
-        currencySelected = currencies[indexPath.row]
-        collectionView.reloadData()
     }
 }
 
