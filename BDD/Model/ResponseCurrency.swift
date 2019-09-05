@@ -8,13 +8,12 @@
 
 import Foundation
 
+// MARK: - ResponseCurrency
 struct ResponseCurrency: Codable {
     let symbolsReturned: Int?
-    let symbolsRequested: Int?
     let base: String?
-    let data: [Currency]?
+    let data: Currency?
     enum CodingKeys: String, CodingKey {
-        case symbolsRequested = "symbols_requested"
         case symbolsReturned = "symbols_returned"
         case base, data
     }

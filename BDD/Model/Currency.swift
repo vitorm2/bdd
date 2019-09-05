@@ -8,14 +8,4 @@
 
 import Foundation
 
-struct Currency: Codable {
-    let symbolsReturned: Int?
-    let symbolsRequested: Int?
-    let base: String?
-    let data: [String : String]?
-    enum CodingKeys: String, CodingKey {
-        case symbolsRequested = "symbols_requested"
-        case symbolsReturned = "symbols_returned"
-        case base, data
-    }
-}
+typealias Currency = [String: String]
