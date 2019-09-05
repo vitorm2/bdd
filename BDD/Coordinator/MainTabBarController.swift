@@ -11,10 +11,12 @@ import UIKit
 class MainTabBarController: UITabBarController {
 
     let appCoordinator = ApplicationCoordinator(rootViewController: UINavigationController())
+    let listCoordinator = ConsultListCoordinator(presenter: UINavigationController())
     override func viewDidLoad() {
         super.viewDidLoad()
         appCoordinator.start()
-        viewControllers = [appCoordinator.rootViewController]
+        listCoordinator.start()
+        viewControllers = [appCoordinator.rootViewController, listCoordinator.presenter]
         // Do any additional setup after loading the view.
     }
     
