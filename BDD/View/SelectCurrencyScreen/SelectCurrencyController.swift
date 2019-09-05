@@ -5,6 +5,7 @@
 //  Created by Vitor Demenighi on 03/09/19.
 //  Copyright © 2019 LeonardoBSR. All rights reserved.
 //
+// swiftlint:disable all
 
 import UIKit
 
@@ -13,50 +14,71 @@ struct CurrencyViewData {
     var selected: Bool = false
 }
 
+
 class SelectCurrencyController: UIViewController {
     @IBOutlet weak var currencyCollectionView: UICollectionView!
     
-    var arrayCurrency: [CurrencyViewData] =
-        [CurrencyViewData(), CurrencyViewData(), CurrencyViewData(), CurrencyViewData()]
+    var currencies: [CurrencyCellViewData] = []
+    var currencySelected: CurrencyCellViewData?
+    
+    weak var delegate: SelectCurrencyControllerDelegate?
+    var presenter: SelectCurrencyPresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = SelectCurrencyPresenter()
+        currencies = presenter?.getCUrrenciesList() ?? []
+        
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Select Currency"
         let backItem = UIBarButtonItem()
         backItem.title = "Back"
         let rightButton = UIBarButtonItem()
         rightButton.title = "Ok"
+        rightButton.action = #selector(OKAction(_:))
         self.navigationItem.backBarButtonItem = backItem
         self.navigationItem.rightBarButtonItem = rightButton
+        self.navigationItem.rightBarButtonItem?.target = self
+        
+        
         currencyCollectionView.delegate = self
         currencyCollectionView.dataSource = self
+    }
+    
+    @objc func OKAction(_ sender: AnyObject) {
+        // MANDA A MOEDA SELECIOADA PRA TELA ANTERIOR
+        self.delegate?.startNewConsultViewController(self, currencySelected: currencySelected)
     }
 }
 
 extension SelectCurrencyController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if  !arrayCurrency[indexPath.row].selected {
-            arrayCurrency[indexPath.row].selected = true
+        if  !currencies[indexPath.row].selected {
+            currencies[indexPath.row].selected = true
         } else {
-            arrayCurrency[indexPath.row].selected = false
+            currencies[indexPath.row].selected = false
         }
+        // SELECIONA MOEDA
+        currencySelected = currencies[indexPath.row]
         collectionView.reloadData()
     }
 }
 
 extension SelectCurrencyController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayCurrency.count
+        return currencies.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
         -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "currencyCollectionCell", for: indexPath)
             as? CurrencyCell
             guard let cell = myCell else { return myCell! }
-            cell.currencyLabel.text = arrayCurrency[indexPath.row].currency
-//
-//
-            if arrayCurrency[indexPath.row].selected {
+            cell.currencyLabel.text = currencies[indexPath.row].currency
+
+            
+            
+            if currencies[indexPath.row].selected {
                 if cell.layer.sublayers?.count == 1 {
                     // Adiciona gradiente
                     let colorTop =  UIColor(red: 0.53, green: 0.46, blue: 0.98, alpha: 1).cgColor

@@ -79,7 +79,7 @@ extension API {
                             return
                         }
                         var objectData: Any = result
-                        print(result)
+                        //print(result)
                         if let object = result["data"] as? JSON {
                             objectData = object
                         } else if let results = result["data"] as? [JSON] {

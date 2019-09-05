@@ -9,6 +9,5 @@
 import Foundation
 
 protocol NewConsultView: NSObjectProtocol {
-    func updateCurrencies(currencies: [Currency])
-    func update()
+    func showResultScreen(result: ConvertResultViewData)
 }

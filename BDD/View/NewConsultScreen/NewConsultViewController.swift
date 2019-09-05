@@ -5,20 +5,26 @@
 //  Created by Leonardo Reis on 02/09/19.
 //  Copyright © 2019 LeonardoBSR. All rights reserved.
 //
+// swiftlint:disable all
 
 import UIKit
 
 class NewConsultViewController: UIViewController {
+
     @IBOutlet weak var stockField: UITextField! {
         didSet { stockField?.addDoneToolbar() }
     }
     @IBOutlet weak var quantityField: UITextField! {
         didSet { quantityField?.addDoneToolbar() }
     }
+    
+    @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     @IBOutlet weak var selectedCurrenciesCollection: UICollectionView!
     var presenter: NewConsultPresenter?
     weak var delegate: NewConsultViewControllerDelegate?
-    var selectedCurrencies: [Currency] = []
+    
+    var mySelectedCurrency: CurrencyCellViewData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,11 +45,16 @@ class NewConsultViewController: UIViewController {
         //CollectionView
         self.selectedCurrenciesCollection.delegate = self
         self.selectedCurrenciesCollection.dataSource = self
+        
+        
     }
     @IBAction func researchButtonAction(_ sender: Any) {
-        self.presenter?.convertStockCurrency(stockCode: self.stockField.text ?? "", currencies: [], quantity: 1)
+        progressIndicator.isHidden = false
+        
+        self.presenter?.getConvertStockCurrency(stockCode: stockField.text ?? "AAPL", convertCurrency: mySelectedCurrency?.currency ?? "BRL", quantity: Int(quantityField.text!)!)
     }
 }
+
 
 extension NewConsultViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -52,7 +63,9 @@ extension NewConsultViewController: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return self.selectedCurrencies.count
+            if let _ = mySelectedCurrency { // Cria a section moeda selecionada
+                return 1
+            } else { return 0 }
         case 1:
             return 1
         default:
@@ -63,8 +76,13 @@ extension NewConsultViewController: UICollectionViewDataSource, UICollectionView
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CurrencyCell",
-                                                                for: indexPath)
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CurrencyCell",
+                                                                for: indexPath) as?  CurrencyCell else { fatalError() }
+            
+            if let seletectCurrency = mySelectedCurrency {
+                cell.currencyLabel.text = seletectCurrency.currency
+            }
+          
             return cell
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmptyCurrencyCell",
@@ -78,7 +96,9 @@ extension NewConsultViewController: UICollectionViewDataSource, UICollectionView
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            self.delegate?.newConsultViewController(self)
+        
+        // Vai para tela selecao de moedas
+        self.delegate?.startSelectCurrencyController(self)
     }
 }
 
@@ -100,11 +120,11 @@ extension UITextField {
 }
 
 extension NewConsultViewController: NewConsultView {
-    func updateCurrencies(currencies: [Currency]) {
-        self.selectedCurrencies = currencies
-        self.selectedCurrenciesCollection.reloadData()
-    }
-    func update(){
-        print("View updated")
+    
+    func showResultScreen(result: ConvertResultViewData){
+        
+         progressIndicator.isHidden = true
+        // vai pra tela de resultados
+        self.delegate?.startResultController(self, result: result)
     }
 }
