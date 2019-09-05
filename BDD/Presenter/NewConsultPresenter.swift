@@ -26,8 +26,12 @@ class NewConsultPresenter {
             guard let self = self,
                 case .success(let stocks) = result else { return }
 
+            guard let stockName = stocks[0]?.name else { return }
             guard let stockPrice = stocks[0]?.price else { return }
             guard let stockOriginalCurrency = stocks[0]?.currency else { return }
+            guard let marketCap = stocks[0]?.marketCap else { return }
+            guard let changePercent = stocks[0]?.changePct else { return }
+            guard let lastTradeTime = stocks[0]?.lastTradeTime else { return }
 
             API<[String: String]>.forex(params: stockOriginalCurrency).request { [weak self] result in
                 guard let self = self,
@@ -36,10 +40,11 @@ class NewConsultPresenter {
                 guard let convertCurrencyValue = currency[convertCurrency] else { return }
 
                 // Conversao
-                let result = Double(stockPrice)! * Double(convertCurrencyValue)! * quantity
+                let result = Double(stockPrice)! * Double(convertCurrencyValue)!
 
-                let convertResult = ConvertResultViewData(stockOriginalPrice: Double(stockPrice)!,
-                                    stockConvertPrice: result, originalCurrency: stockOriginalCurrency, convertCurrency: convertCurrency, quantity: quantity)
+                let convertResult = ConvertResultViewData(stockTag: stockCode, stockName: stockName, stockOriginalPrice: Double(stockPrice)!,
+                                    stockConvertPrice: result, originalCurrency: stockOriginalCurrency, convertCurrency: convertCurrency, quantity: quantity, marketCap:
+                    marketCap, changePercent: changePercent, lastTradeTime: lastTradeTime)
 
                 self.consultView?.showResultScreen(result: convertResult)
             }
@@ -48,9 +53,15 @@ class NewConsultPresenter {
 }
 
 struct ConvertResultViewData {
+    
+    let stockTag: String
+    let stockName: String
     let stockOriginalPrice: Double
     let stockConvertPrice: Double
     let originalCurrency: String
     let convertCurrency: String
     let quantity: Double
+    let marketCap: String
+    let changePercent: String
+    let lastTradeTime: String
 }

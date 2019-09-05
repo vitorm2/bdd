@@ -76,6 +76,7 @@ extension SelectCurrencyController: UICollectionViewDataSource {
             cell.currencyLabel.text = currencies[indexPath.row].currency
 
             
+            cell.currencyFlag.image = UIImage(named: currencies[indexPath.row].currency)
             
             if currencies[indexPath.row].selected {
                 if cell.layer.sublayers?.count == 1 {

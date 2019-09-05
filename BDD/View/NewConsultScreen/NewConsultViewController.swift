@@ -98,6 +98,7 @@ class NewConsultViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
         setButtonLayout()
     }
 }
@@ -130,6 +131,8 @@ extension NewConsultViewController: UICollectionViewDataSource, UICollectionView
                 cell.currencyLabel.text = seletectCurrency.currency
                 
                 // *** FAZER METODO PARA PEGAR A IMAGEM CERTA
+                
+                cell.currencyFlag.image = UIImage(named: seletectCurrency.currency)
                 
                 cell.layer.cornerRadius = 8.0
                 cell.layer.masksToBounds = false

@@ -30,7 +30,6 @@ class SelectCurrencyPresenter {
         currencies.append(CurrencyCellViewData(currency: "CAD", currencyTag: "EUR - $", selected: false))
         currencies.append(CurrencyCellViewData(currency: "BRL", currencyTag: "EUR - $", selected: false))
         currencies.append(CurrencyCellViewData(currency: "AUD", currencyTag: "EUR - $", selected: false))
-        currencies.append(CurrencyCellViewData(currency: "GGP", currencyTag: "EUR - $", selected: false))
         currencies.append(CurrencyCellViewData(currency: "CHF", currencyTag: "EUR - $", selected: false))
         currencies.append(CurrencyCellViewData(currency: "KRW", currencyTag: "EUR - $", selected: false))
         currencies.append(CurrencyCellViewData(currency: "INR", currencyTag: "EUR - $", selected: false))
@@ -45,7 +44,7 @@ class SelectCurrencyPresenter {
 
 struct CurrencyCellViewData {
     var currency: String
-    var currencyTag: String// = "Dólar - US$"
+    var currencyTag: String
     var selected: Bool
 }
 
