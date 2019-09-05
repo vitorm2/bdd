@@ -58,7 +58,7 @@ extension SelectCurrencyController: UICollectionViewDelegate {
             }
             indexCurrencySelected = indexPath.row
             collectionView.reloadData()
-            
+            self.navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 0.53, green: 0.46, blue: 0.98, alpha: 1)
             currencySelected = currencies[indexPath.row]
         }
     }
