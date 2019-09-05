@@ -27,6 +27,9 @@
 		1FE51D282320452000EB85E2 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FE51D262320452000EB85E2 /* response.json */; };
 		2EF3BDE131053A4AECEFE3A8 /* Pods_BDDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A449BF0355EE0685533514 /* Pods_BDDTests.framework */; };
 		439C679157038F283864360C /* Pods_BDD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634069FF62D9333518C33E5B /* Pods_BDD.framework */; };
+		7D4F0BBB2321B1670034A924 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F0BB82321B1670034A924 /* PortfolioTableViewCell.swift */; };
+		7D4F0BBC2321B1670034A924 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F0BB92321B1670034A924 /* PortfolioViewController.swift */; };
+		7D4F0BBD2321B1670034A924 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4F0BBA2321B1670034A924 /* Portfolio.storyboard */; };
 		AC38C6BC231F13E400653E40 /* SelectCurrencyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */; };
 		AC38C6BE2320329500653E40 /* NewConsultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38C6BD2320329500653E40 /* NewConsultView.swift */; };
 		AC8AC074231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AC073231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift */; };
@@ -93,6 +96,9 @@
 		77E7C30DF34B0530DDFC546A /* Pods-BDDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDUITests.debug.xcconfig"; path = "Target Support Files/Pods-BDDUITests/Pods-BDDUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		783928DF96E14D31A715431A /* Pods_BDDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BDDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEDAD0D17E5C732BC2765D4 /* Pods-BDDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDTests.debug.xcconfig"; path = "Target Support Files/Pods-BDDTests/Pods-BDDTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D4F0BB82321B1670034A924 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioTableViewCell.swift; path = Portfolio/PortfolioTableViewCell.swift; sourceTree = "<group>"; };
+		7D4F0BB92321B1670034A924 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioViewController.swift; path = Portfolio/PortfolioViewController.swift; sourceTree = "<group>"; };
+		7D4F0BBA2321B1670034A924 /* Portfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Portfolio.storyboard; path = Portfolio/Portfolio.storyboard; sourceTree = "<group>"; };
 		AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyCoordinator.swift; sourceTree = "<group>"; };
 		AC38C6BD2320329500653E40 /* NewConsultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultView.swift; sourceTree = "<group>"; };
 		AC8AC073231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCurrencyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -250,6 +256,9 @@
 		AC9A77B5231D9C0800DCC43B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7D4F0BBA2321B1670034A924 /* Portfolio.storyboard */,
+				7D4F0BB82321B1670034A924 /* PortfolioTableViewCell.swift */,
+				7D4F0BB92321B1670034A924 /* PortfolioViewController.swift */,
 				CFF73648232130EA0004F845 /* NewConsultScreen */,
 				CFF7364A232131120004F845 /* SelectCurrencyScreen */,
 				CFF73647232130DF0004F845 /* ResultScreen */,
@@ -433,10 +442,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F5DB717231D8A4600BC757A /* LaunchScreen.storyboard in Resources */,
+				7D4F0BBD2321B1670034A924 /* Portfolio.storyboard in Resources */,
 				CFF7364C2321313F0004F845 /* Result.storyboard in Resources */,
 				1F5DB714231D8A4600BC757A /* Assets.xcassets in Resources */,
 				1F5DB712231D8A4500BC757A /* NewConsult.storyboard in Resources */,
-				7D1588D923218F8500109580 /* Portfolio.storyboard in Resources */,
 				CFC42263231F0F3400AB273F /* Sarabun-Medium.ttf in Resources */,
 				1FE51D272320452000EB85E2 /* response.json in Resources */,
 				CF43961E231EE9E4007F89F4 /* SelectCurrency.storyboard in Resources */,
@@ -602,6 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4F0BBB2321B1670034A924 /* PortfolioTableViewCell.swift in Sources */,
 				AC38C6BE2320329500653E40 /* NewConsultView.swift in Sources */,
 				1F5DB70F231D8A4500BC757A /* NewConsultViewController.swift in Sources */,
 				CFF7364E232131630004F845 /* ResultController.swift in Sources */,
@@ -620,6 +630,7 @@
 				1F5DB73E231DA5CA00BC757A /* API.swift in Sources */,
 				AC9A77B1231D963900DCC43B /* ApplicationCoordinator.swift in Sources */,
 				1FDBAF68231EF2EE00DE0320 /* Stock.swift in Sources */,
+				7D4F0BBC2321B1670034A924 /* PortfolioViewController.swift in Sources */,
 				1F5DB742231DA65F00BC757A /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
