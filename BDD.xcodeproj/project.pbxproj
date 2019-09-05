@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1F5DB70D231D8A4500BC757A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB70C231D8A4500BC757A /* AppDelegate.swift */; };
 		1F5DB712231D8A4500BC757A /* NewConsult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DB710231D8A4500BC757A /* NewConsult.storyboard */; };
-		1F5DB714231D8A4600BC757A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DB713231D8A4600BC757A /* Assets.xcassets */; };
 		1F5DB717231D8A4600BC757A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DB715231D8A4600BC757A /* LaunchScreen.storyboard */; };
 		1F5DB727231D8E7E00BC757A /* BDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB726231D8E7E00BC757A /* BDDUITests.swift */; };
 		1F5DB735231D8E8800BC757A /* BDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DB734231D8E8800BC757A /* BDDTests.swift */; };
@@ -28,12 +27,16 @@
 		439C679157038F283864360C /* Pods_BDD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634069FF62D9333518C33E5B /* Pods_BDD.framework */; };
 		61D925DC23206207004DC343 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D925DB23206207004DC343 /* Result.storyboard */; };
 		61D925DE2320648E004DC343 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D925DD2320648E004DC343 /* RoundedView.swift */; };
+		7D4F0BBB2321B1670034A924 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F0BB82321B1670034A924 /* PortfolioTableViewCell.swift */; };
+		7D4F0BBC2321B1670034A924 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F0BB92321B1670034A924 /* PortfolioViewController.swift */; };
+		7D4F0BBD2321B1670034A924 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4F0BBA2321B1670034A924 /* Portfolio.storyboard */; };
 		AC38C6BC231F13E400653E40 /* SelectCurrencyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */; };
 		AC9A77AF231D956900DCC43B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77AE231D956900DCC43B /* Coordinator.swift */; };
 		AC9A77B1231D963900DCC43B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */; };
 		AC9A77B3231D96B900DCC43B /* NewConsultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B2231D96B900DCC43B /* NewConsultCoordinator.swift */; };
 		AC9A77B7231D9C3100DCC43B /* NewConsultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B6231D9C3100DCC43B /* NewConsultPresenter.swift */; };
 		C4CC05D4015A8B3AE30B3F78 /* Pods_BDDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783928DF96E14D31A715431A /* Pods_BDDUITests.framework */; };
+		CF52BE2D2321BF4000C47A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF52BE2C2321BF4000C47A99 /* Assets.xcassets */; };
 		CFC42263231F0F3400AB273F /* Sarabun-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFC42262231F0F3400AB273F /* Sarabun-Medium.ttf */; };
 		CFF7364E232131630004F845 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7364D232131630004F845 /* ResultController.swift */; };
 		CFF73650232133530004F845 /* ResultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7364F232133530004F845 /* ResultCoordinator.swift */; };
@@ -68,7 +71,6 @@
 		1F5DB709231D8A4500BC757A /* BDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5DB70C231D8A4500BC757A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F5DB711231D8A4500BC757A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewConsult.storyboard; sourceTree = "<group>"; };
-		1F5DB713231D8A4600BC757A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F5DB716231D8A4600BC757A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F5DB718231D8A4600BC757A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F5DB724231D8E7E00BC757A /* BDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BDDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,11 +98,15 @@
 		77E7C30DF34B0530DDFC546A /* Pods-BDDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDUITests.debug.xcconfig"; path = "Target Support Files/Pods-BDDUITests/Pods-BDDUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		783928DF96E14D31A715431A /* Pods_BDDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BDDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEDAD0D17E5C732BC2765D4 /* Pods-BDDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDTests.debug.xcconfig"; path = "Target Support Files/Pods-BDDTests/Pods-BDDTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D4F0BB82321B1670034A924 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioTableViewCell.swift; path = Portfolio/PortfolioTableViewCell.swift; sourceTree = "<group>"; };
+		7D4F0BB92321B1670034A924 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioViewController.swift; path = Portfolio/PortfolioViewController.swift; sourceTree = "<group>"; };
+		7D4F0BBA2321B1670034A924 /* Portfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Portfolio.storyboard; path = Portfolio/Portfolio.storyboard; sourceTree = "<group>"; };
 		AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyCoordinator.swift; sourceTree = "<group>"; };
 		AC9A77AE231D956900DCC43B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		AC9A77B2231D96B900DCC43B /* NewConsultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultCoordinator.swift; sourceTree = "<group>"; };
 		AC9A77B6231D9C3100DCC43B /* NewConsultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultPresenter.swift; sourceTree = "<group>"; };
+		CF52BE2C2321BF4000C47A99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = fonts/Assets.xcassets; sourceTree = "<group>"; };
 		CFC42262231F0F3400AB273F /* Sarabun-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarabun-Medium.ttf"; sourceTree = "<group>"; };
 		CFF7364D232131630004F845 /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
 		CFF7364F232133530004F845 /* ResultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCoordinator.swift; sourceTree = "<group>"; };
@@ -178,7 +184,7 @@
 				AC9A77B5231D9C0800DCC43B /* View */,
 				1F5DB715231D8A4600BC757A /* LaunchScreen.storyboard */,
 				CFC42261231F0F1500AB273F /* fonts */,
-				1F5DB713231D8A4600BC757A /* Assets.xcassets */,
+				CF52BE2C2321BF4000C47A99 /* Assets.xcassets */,
 				1F5DB718231D8A4600BC757A /* Info.plist */,
 			);
 			path = BDD;
@@ -255,6 +261,9 @@
 			isa = PBXGroup;
 			children = (
 				CFF736612321A7180004F845 /* Components */,
+				7D4F0BBA2321B1670034A924 /* Portfolio.storyboard */,
+				7D4F0BB82321B1670034A924 /* PortfolioTableViewCell.swift */,
+				7D4F0BB92321B1670034A924 /* PortfolioViewController.swift */,
 				CFF73648232130EA0004F845 /* NewConsultScreen */,
 				CFF7364A232131120004F845 /* SelectCurrencyScreen */,
 				CFF73647232130DF0004F845 /* ResultScreen */,
@@ -440,7 +449,8 @@
 			files = (
 				1F5DB717231D8A4600BC757A /* LaunchScreen.storyboard in Resources */,
 				CFF736592321A4DB0004F845 /* SelectCurrency.storyboard in Resources */,
-				1F5DB714231D8A4600BC757A /* Assets.xcassets in Resources */,
+				7D4F0BBD2321B1670034A924 /* Portfolio.storyboard in Resources */,
+				CF52BE2D2321BF4000C47A99 /* Assets.xcassets in Resources */,
 				1F5DB712231D8A4500BC757A /* NewConsult.storyboard in Resources */,
 				CFC42263231F0F3400AB273F /* Sarabun-Medium.ttf in Resources */,
 				1FE51D272320452000EB85E2 /* response.json in Resources */,
@@ -609,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF7365A2321A4DB0004F845 /* SelectCurrencyController.swift in Sources */,
+				7D4F0BBB2321B1670034A924 /* PortfolioTableViewCell.swift in Sources */,
 				CFF7364E232131630004F845 /* ResultController.swift in Sources */,
 				CFF73650232133530004F845 /* ResultCoordinator.swift in Sources */,
 				CFF7365223216A440004F845 /* SelectCurrencyPresenter.swift in Sources */,
@@ -627,6 +638,7 @@
 				1FDBAF68231EF2EE00DE0320 /* Stock.swift in Sources */,
 				CFF7365C2321A4FC0004F845 /* EmptyCurrencyCollectionViewCell.swift in Sources */,
 				CFF736602321A52C0004F845 /* NewConsultViewController.swift in Sources */,
+				7D4F0BBC2321B1670034A924 /* PortfolioViewController.swift in Sources */,
 				1F5DB742231DA65F00BC757A /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
