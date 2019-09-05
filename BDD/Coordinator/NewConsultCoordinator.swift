@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 class NewConsultCoordinator: Coordinator {
-    
+    var childCoordinators: [Coordinator]
     private var presenter: UINavigationController
     private var selectCurrencyCoordinator: SelectCurrencyCoordinator?
     private var resultCoordinator: ResultCoordinator?
@@ -19,6 +19,7 @@ class NewConsultCoordinator: Coordinator {
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
+        self.childCoordinators = []
     }
     func start() {
         if let mainVC = UIStoryboard(name: "NewConsult", bundle: nil).instantiateViewController(withIdentifier: "NewConsult")
