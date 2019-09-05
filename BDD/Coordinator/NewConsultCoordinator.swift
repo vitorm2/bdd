@@ -26,6 +26,7 @@ class NewConsultCoordinator: Coordinator {
             as? NewConsultViewController {
             
             mainVC.delegate = self
+            mainVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
             presenter.setViewControllers([mainVC], animated: true)
         }
     }

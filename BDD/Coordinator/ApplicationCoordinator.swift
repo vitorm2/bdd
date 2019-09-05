@@ -11,7 +11,7 @@ import UIKit
 
 class ApplicationCoordinator: Coordinator {
     //private let window: UIWindow
-    private let rootViewController: UINavigationController
+    let rootViewController: UINavigationController
     private var newConsultCoordinator: NewConsultCoordinator?
     init(rootViewController: UINavigationController) {
         //self.window = window
@@ -28,9 +28,6 @@ class ApplicationCoordinator: Coordinator {
         newConsultCoordinator = NewConsultCoordinator(presenter: rootViewController)
     }
     func start() {
-        ..window.rootViewController = rootViewController
-        let vc = NewConsultViewController.instantiate()
         newConsultCoordinator?.start()
-        window.makeKeyAndVisible()
     }
 }
