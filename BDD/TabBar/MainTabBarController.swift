@@ -16,6 +16,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         appCoordinator.start()
         listCoordinator.start()
+        //each view is a tab item
         viewControllers = [appCoordinator.rootViewController, listCoordinator.presenter]
         // Do any additional setup after loading the view.
     }

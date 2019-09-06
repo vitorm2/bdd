@@ -109,14 +109,10 @@
 		AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		AC9A77B2231D96B900DCC43B /* NewConsultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultCoordinator.swift; sourceTree = "<group>"; };
 		AC9A77B6231D9C3100DCC43B /* NewConsultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultPresenter.swift; sourceTree = "<group>"; };
-		CF52BE2C2321BF4000C47A99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = fonts/Assets.xcassets; sourceTree = "<group>"; };
-		AC9A77B9231D9C8F00DCC43B /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		ACDAACD8232187E7004E3A48 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		ACDAACDA23219333004E3A48 /* ConsultList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConsultList.storyboard; sourceTree = "<group>"; };
 		ACDAACDD23219406004E3A48 /* ConsultListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultListCoordinator.swift; sourceTree = "<group>"; };
-		CF43961D231EE9E4007F89F4 /* SelectCurrency.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCurrency.storyboard; sourceTree = "<group>"; };
-		CF43961F231EE9F3007F89F4 /* SelectCurrencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyController.swift; sourceTree = "<group>"; };
-		CF439621231EEBE8007F89F4 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		CF52BE2C2321BF4000C47A99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = fonts/Assets.xcassets; sourceTree = "<group>"; };
 		CFC42262231F0F3400AB273F /* Sarabun-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarabun-Medium.ttf"; sourceTree = "<group>"; };
 		CFF7364D232131630004F845 /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
 		CFF7364F232133530004F845 /* ResultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCoordinator.swift; sourceTree = "<group>"; };
@@ -188,6 +184,7 @@
 			children = (
 				1F5DB73C231DA5B700BC757A /* Helper */,
 				1F5DB70C231D8A4500BC757A /* AppDelegate.swift */,
+				AC0B71A12321E71400D5A1D5 /* TabBar */,
 				AC9A77B4231D9AB700DCC43B /* Coordinator */,
 				AC9A77BB231D9CAC00DCC43B /* Model */,
 				AC9A77B8231D9C5B00DCC43B /* Presenter */,
@@ -255,10 +252,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		AC9A77B4231D9AB700DCC43B /* Coordinator */ = {
+		AC0B71A12321E71400D5A1D5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				ACDAACD8232187E7004E3A48 /* MainTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		AC9A77B4231D9AB700DCC43B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
 				AC9A77AE231D956900DCC43B /* Coordinator.swift */,
 				AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */,
 				ACDAACDD23219406004E3A48 /* ConsultListCoordinator.swift */,
@@ -649,7 +653,6 @@
 				CFF736582321A4DB0004F845 /* CurrencyCell.swift in Sources */,
 				AC38C6BC231F13E400653E40 /* SelectCurrencyCoordinator.swift in Sources */,
 				ACDAACDE23219406004E3A48 /* ConsultListCoordinator.swift in Sources */,
-				AC8AC074231ED2AA00CB92EB /* EmptyCurrencyCollectionViewCell.swift in Sources */,
 				1F5DB70D231D8A4500BC757A /* AppDelegate.swift in Sources */,
 				AC9A77B7231D9C3100DCC43B /* NewConsultPresenter.swift in Sources */,
 				AC9A77B3231D96B900DCC43B /* NewConsultCoordinator.swift in Sources */,
