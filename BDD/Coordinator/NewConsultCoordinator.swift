@@ -19,6 +19,7 @@ class NewConsultCoordinator: Coordinator {
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
+        self.presenter.navigationItem.title = "Consult"
         self.childCoordinators = []
     }
     func start() {
@@ -27,7 +28,7 @@ class NewConsultCoordinator: Coordinator {
             
             mainVC.delegate = self
 //            mainVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
-            mainVC.tabBarItem = UITabBarItem.init(title: " ", image: UIImage.init(named: "consult-off"), tag: 0)
+            mainVC.tabBarItem = UITabBarItem.init(title: " ", image: UIImage.init(named: "consult-off"), tag: 1)
             mainVC.tabBarItem.imageInsets.top = -25
             mainVC.tabBarItem.selectedImage = UIImage.init(named: "consult")
 //            mainVC.tabBarItem.image = UIImage.init(named: "consult")

@@ -30,14 +30,16 @@
 		7D4F0BBB2321B1670034A924 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F0BB82321B1670034A924 /* PortfolioTableViewCell.swift */; };
 		7D4F0BBC2321B1670034A924 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F0BB92321B1670034A924 /* PortfolioViewController.swift */; };
 		7D4F0BBD2321B1670034A924 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4F0BBA2321B1670034A924 /* Portfolio.storyboard */; };
+		AC0B71A4232268BB00D5A1D5 /* PortfolioCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B71A3232268BB00D5A1D5 /* PortfolioCoordinator.swift */; };
+		AC0B71A623226F2A00D5A1D5 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B71A523226F2A00D5A1D5 /* FeedViewController.swift */; };
 		AC38C6BC231F13E400653E40 /* SelectCurrencyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */; };
 		AC9A77AF231D956900DCC43B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77AE231D956900DCC43B /* Coordinator.swift */; };
 		AC9A77B1231D963900DCC43B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */; };
 		AC9A77B3231D96B900DCC43B /* NewConsultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B2231D96B900DCC43B /* NewConsultCoordinator.swift */; };
 		AC9A77B7231D9C3100DCC43B /* NewConsultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A77B6231D9C3100DCC43B /* NewConsultPresenter.swift */; };
 		ACDAACD9232187E7004E3A48 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAACD8232187E7004E3A48 /* MainTabBarController.swift */; };
-		ACDAACDB23219333004E3A48 /* ConsultList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDAACDA23219333004E3A48 /* ConsultList.storyboard */; };
-		ACDAACDE23219406004E3A48 /* ConsultListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAACDD23219406004E3A48 /* ConsultListCoordinator.swift */; };
+		ACDAACDB23219333004E3A48 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDAACDA23219333004E3A48 /* Feed.storyboard */; };
+		ACDAACDE23219406004E3A48 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAACDD23219406004E3A48 /* FeedCoordinator.swift */; };
 		C4CC05D4015A8B3AE30B3F78 /* Pods_BDDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783928DF96E14D31A715431A /* Pods_BDDUITests.framework */; };
 		CF52BE2D2321BF4000C47A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF52BE2C2321BF4000C47A99 /* Assets.xcassets */; };
 		CFC42263231F0F3400AB273F /* Sarabun-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFC42262231F0F3400AB273F /* Sarabun-Medium.ttf */; };
@@ -101,17 +103,19 @@
 		77E7C30DF34B0530DDFC546A /* Pods-BDDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDUITests.debug.xcconfig"; path = "Target Support Files/Pods-BDDUITests/Pods-BDDUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		783928DF96E14D31A715431A /* Pods_BDDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BDDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEDAD0D17E5C732BC2765D4 /* Pods-BDDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDTests.debug.xcconfig"; path = "Target Support Files/Pods-BDDTests/Pods-BDDTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7D4F0BB82321B1670034A924 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioTableViewCell.swift; path = Portfolio/PortfolioTableViewCell.swift; sourceTree = "<group>"; };
-		7D4F0BB92321B1670034A924 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortfolioViewController.swift; path = Portfolio/PortfolioViewController.swift; sourceTree = "<group>"; };
-		7D4F0BBA2321B1670034A924 /* Portfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Portfolio.storyboard; path = Portfolio/Portfolio.storyboard; sourceTree = "<group>"; };
+		7D4F0BB82321B1670034A924 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
+		7D4F0BB92321B1670034A924 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		7D4F0BBA2321B1670034A924 /* Portfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
+		AC0B71A3232268BB00D5A1D5 /* PortfolioCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCoordinator.swift; sourceTree = "<group>"; };
+		AC0B71A523226F2A00D5A1D5 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyCoordinator.swift; sourceTree = "<group>"; };
 		AC9A77AE231D956900DCC43B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		AC9A77B2231D96B900DCC43B /* NewConsultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultCoordinator.swift; sourceTree = "<group>"; };
 		AC9A77B6231D9C3100DCC43B /* NewConsultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConsultPresenter.swift; sourceTree = "<group>"; };
 		ACDAACD8232187E7004E3A48 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		ACDAACDA23219333004E3A48 /* ConsultList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConsultList.storyboard; sourceTree = "<group>"; };
-		ACDAACDD23219406004E3A48 /* ConsultListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultListCoordinator.swift; sourceTree = "<group>"; };
+		ACDAACDA23219333004E3A48 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		ACDAACDD23219406004E3A48 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		CF52BE2C2321BF4000C47A99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = fonts/Assets.xcassets; sourceTree = "<group>"; };
 		CFC42262231F0F3400AB273F /* Sarabun-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarabun-Medium.ttf"; sourceTree = "<group>"; };
 		CFF7364D232131630004F845 /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
@@ -260,12 +264,23 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		AC0B71A22322688B00D5A1D5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				7D4F0BBA2321B1670034A924 /* Portfolio.storyboard */,
+				7D4F0BB82321B1670034A924 /* PortfolioTableViewCell.swift */,
+				7D4F0BB92321B1670034A924 /* PortfolioViewController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		AC9A77B4231D9AB700DCC43B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				AC9A77AE231D956900DCC43B /* Coordinator.swift */,
 				AC9A77B0231D963900DCC43B /* ApplicationCoordinator.swift */,
-				ACDAACDD23219406004E3A48 /* ConsultListCoordinator.swift */,
+				AC0B71A3232268BB00D5A1D5 /* PortfolioCoordinator.swift */,
+				ACDAACDD23219406004E3A48 /* FeedCoordinator.swift */,
 				AC9A77B2231D96B900DCC43B /* NewConsultCoordinator.swift */,
 				AC38C6BB231F13E400653E40 /* SelectCurrencyCoordinator.swift */,
 				CFF7364F232133530004F845 /* ResultCoordinator.swift */,
@@ -277,13 +292,11 @@
 			isa = PBXGroup;
 			children = (
 				CFF736612321A7180004F845 /* Components */,
-				7D4F0BBA2321B1670034A924 /* Portfolio.storyboard */,
-				7D4F0BB82321B1670034A924 /* PortfolioTableViewCell.swift */,
-				7D4F0BB92321B1670034A924 /* PortfolioViewController.swift */,
+				AC0B71A22322688B00D5A1D5 /* New Group */,
 				CFF73648232130EA0004F845 /* NewConsultScreen */,
 				CFF7364A232131120004F845 /* SelectCurrencyScreen */,
 				CFF73647232130DF0004F845 /* ResultScreen */,
-				ACDAACDC23219339004E3A48 /* ConsultList */,
+				ACDAACDC23219339004E3A48 /* Feed */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,12 +319,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		ACDAACDC23219339004E3A48 /* ConsultList */ = {
+		ACDAACDC23219339004E3A48 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				ACDAACDA23219333004E3A48 /* ConsultList.storyboard */,
+				ACDAACDA23219333004E3A48 /* Feed.storyboard */,
+				AC0B71A523226F2A00D5A1D5 /* FeedViewController.swift */,
 			);
-			path = ConsultList;
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		CFC42261231F0F1500AB273F /* fonts */ = {
@@ -476,7 +490,7 @@
 				CFF736592321A4DB0004F845 /* SelectCurrency.storyboard in Resources */,
 				7D4F0BBD2321B1670034A924 /* Portfolio.storyboard in Resources */,
 				CF52BE2D2321BF4000C47A99 /* Assets.xcassets in Resources */,
-				ACDAACDB23219333004E3A48 /* ConsultList.storyboard in Resources */,
+				ACDAACDB23219333004E3A48 /* Feed.storyboard in Resources */,
 				1F5DB712231D8A4500BC757A /* NewConsult.storyboard in Resources */,
 				CFC42263231F0F3400AB273F /* Sarabun-Medium.ttf in Resources */,
 				1FE51D272320452000EB85E2 /* response.json in Resources */,
@@ -649,10 +663,11 @@
 				CFF7364E232131630004F845 /* ResultController.swift in Sources */,
 				CFF73650232133530004F845 /* ResultCoordinator.swift in Sources */,
 				CFF7365223216A440004F845 /* SelectCurrencyPresenter.swift in Sources */,
+				AC0B71A4232268BB00D5A1D5 /* PortfolioCoordinator.swift in Sources */,
 				61D925DE2320648E004DC343 /* RoundedView.swift in Sources */,
 				CFF736582321A4DB0004F845 /* CurrencyCell.swift in Sources */,
 				AC38C6BC231F13E400653E40 /* SelectCurrencyCoordinator.swift in Sources */,
-				ACDAACDE23219406004E3A48 /* ConsultListCoordinator.swift in Sources */,
+				ACDAACDE23219406004E3A48 /* FeedCoordinator.swift in Sources */,
 				1F5DB70D231D8A4500BC757A /* AppDelegate.swift in Sources */,
 				AC9A77B7231D9C3100DCC43B /* NewConsultPresenter.swift in Sources */,
 				AC9A77B3231D96B900DCC43B /* NewConsultCoordinator.swift in Sources */,
@@ -667,6 +682,7 @@
 				CFF736602321A52C0004F845 /* NewConsultViewController.swift in Sources */,
 				7D4F0BBC2321B1670034A924 /* PortfolioViewController.swift in Sources */,
 				1F5DB742231DA65F00BC757A /* Tools.swift in Sources */,
+				AC0B71A623226F2A00D5A1D5 /* FeedViewController.swift in Sources */,
 				ACDAACD9232187E7004E3A48 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
