@@ -57,8 +57,11 @@ class ResultController: UIViewController {
             
             if Double(result.changePercent)! > 0 {
                 changePercentLabel.text = "+ " + formatValueTwoDecimalPoints(value: Double(result.changePercent)!) + " %"
+                
+                changePercentLabel.textColor = UIColor(red: 0.31, green: 0.83, blue: 0.7, alpha: 1)
             } else {
-                changePercentLabel.text = "- " + formatValueTwoDecimalPoints(value: Double(result.changePercent)!) + " %"
+                changePercentLabel.text = formatValueTwoDecimalPoints(value: Double(result.changePercent)!) + " %"
+                changePercentLabel.textColor = UIColor(red: 1, green: 0.48, blue: 0.48, alpha: 1)
             }
             
             let dateFormatterGet = DateFormatter()
@@ -73,7 +76,7 @@ class ResultController: UIViewController {
             
             companyLogo.image = UIImage.init(named: result.stockTag)
             
-            marketCap.text = result.marketCap
+            marketCap.text = result.marketCap.prefix(3) + " BI"
         }
     }
   

@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="conversao-dark" translatesAutoresizingMaskIntoConstraints="NO" id="WQt-bU-oKC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WQt-bU-oKC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2aE-FP-WbY"/>
+                            <constraint firstItem="WQt-bU-oKC" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="2aE-FP-WbY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WQt-bU-oKC" secondAttribute="trailing" id="NuL-Co-ATH"/>
                             <constraint firstItem="WQt-bU-oKC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kn3-1Q-0n7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WQt-bU-oKC" secondAttribute="bottom" id="twx-Fe-VUH"/>
+                            <constraint firstAttribute="bottom" secondItem="WQt-bU-oKC" secondAttribute="bottom" id="twx-Fe-VUH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
