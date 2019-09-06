@@ -231,6 +231,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bB-fL-L5e">
                                         <rect key="frame" x="24" y="25" width="16" height="22"/>
                                         <state key="normal" image="Vector"/>
+                                        <state key="selected" image="portfolio"/>
+                                        <connections>
+                                            <action selector="saveToPortfolioAction:" destination="kK9-4o-2xC" eventType="touchUpInside" id="c7Q-ta-DZy"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-LB-tn8">
                                         <rect key="frame" x="154" y="174.33333333333334" width="35" height="38"/>
@@ -314,6 +318,7 @@
                     </view>
                     <connections>
                         <outlet property="changePercentLabel" destination="mHT-MV-4BF" id="hg4-71-1cE"/>
+                        <outlet property="companyLogo" destination="KoN-LB-tn8" id="gNV-3V-pnV"/>
                         <outlet property="convertCurrencyLabel" destination="eYD-cy-5J9" id="qTZ-kh-Ngz"/>
                         <outlet property="convertFlag" destination="dJE-7c-dsm" id="9ki-Gj-4vp"/>
                         <outlet property="dateLabel" destination="2ot-ju-70k" id="Dr5-gu-Cby"/>
@@ -342,5 +347,6 @@
         <image name="Vector" width="17.333333969116211" height="20"/>
         <image name="apple" width="25" height="28.333333969116211"/>
         <image name="line" width="331" height="113.66666412353516"/>
+        <image name="portfolio" width="17.333333969116211" height="20"/>
     </resources>
 </document>

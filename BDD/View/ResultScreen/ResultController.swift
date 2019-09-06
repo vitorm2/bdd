@@ -30,6 +30,7 @@ class ResultController: UIViewController {
     @IBOutlet weak var marketCap: UILabel!
     
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var companyLogo: UIImageView!
     
     var result: ConvertResultViewData?
     
@@ -70,6 +71,8 @@ class ResultController: UIViewController {
                 dateLabel.text = dateFormatterPrint.string(from: date).uppercased()
             }
             
+            companyLogo.image = UIImage.init(named: result.stockTag)
+            
             marketCap.text = result.marketCap
         }
     }
@@ -81,7 +84,19 @@ class ResultController: UIViewController {
     func formatValueTwoDecimalPoints(value: Double) -> String {
         return String(format: "%.2f", value)
     }
-
+    
+    @IBAction func saveToPortfolioAction(_ sender: UIButton) {
+        let defaults = UserDefaults()
+        
+        defaults.removeObject(forKey: "stock")
+        
+        defaults.set(result?.stockTag, forKey: "stock")
+        defaults.set(result?.quantity, forKey: "quantity")
+        defaults.set(result?.convertCurrency, forKey: "currency")
+        
+        sender.isSelected = true
+    }
+    
     
 
 }

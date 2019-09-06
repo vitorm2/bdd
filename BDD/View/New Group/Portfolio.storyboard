@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="168" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PoH-KD-j80">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="168" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PoH-KD-j80">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" red="0.070588235294117646" green="0.078431372549019607" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -41,17 +41,17 @@
                                                             <rect key="frame" x="16" y="38" width="55" height="55"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-KX-ViP">
-                                                                    <rect key="frame" x="8" y="8" width="39" height="39"/>
+                                                                    <rect key="frame" x="10" y="10" width="35" height="35"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.52549019607843139" green="0.46274509803921571" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="55" id="Wp3-Vt-V8R"/>
-                                                                <constraint firstItem="ZY4-KX-ViP" firstAttribute="top" secondItem="I0F-iz-aFh" secondAttribute="top" constant="8" id="a3E-eq-1Gh"/>
-                                                                <constraint firstAttribute="bottom" secondItem="ZY4-KX-ViP" secondAttribute="bottom" constant="8" id="el1-zy-Ayf"/>
+                                                                <constraint firstItem="ZY4-KX-ViP" firstAttribute="top" secondItem="I0F-iz-aFh" secondAttribute="top" constant="10" id="a3E-eq-1Gh"/>
+                                                                <constraint firstAttribute="bottom" secondItem="ZY4-KX-ViP" secondAttribute="bottom" constant="10" id="el1-zy-Ayf"/>
                                                                 <constraint firstAttribute="height" constant="55" id="jIr-Nd-TfU"/>
-                                                                <constraint firstAttribute="trailing" secondItem="ZY4-KX-ViP" secondAttribute="trailing" constant="8" id="ndy-P4-FO9"/>
-                                                                <constraint firstItem="ZY4-KX-ViP" firstAttribute="leading" secondItem="I0F-iz-aFh" secondAttribute="leading" constant="8" id="zgw-eC-xut"/>
+                                                                <constraint firstAttribute="trailing" secondItem="ZY4-KX-ViP" secondAttribute="trailing" constant="10" id="ndy-P4-FO9"/>
+                                                                <constraint firstItem="ZY4-KX-ViP" firstAttribute="leading" secondItem="I0F-iz-aFh" secondAttribute="leading" constant="10" id="zgw-eC-xut"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lc3-Ck-unO">
@@ -216,6 +216,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="line" width="93" height="42"/>
+        <image name="line" width="331" height="113.5"/>
     </resources>
 </document>
