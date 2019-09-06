@@ -31,7 +31,7 @@ class SelectCurrencyController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = "Back"
         let rightButton = UIBarButtonItem()
-        rightButton.title = "Ok"
+        rightButton.title = "OK"
         rightButton.action = #selector(OKAction(_:))
         self.navigationItem.backBarButtonItem = backItem
         self.navigationItem.rightBarButtonItem = rightButton

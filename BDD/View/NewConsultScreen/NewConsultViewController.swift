@@ -188,7 +188,7 @@ extension UITextField {
         toolbar.barStyle = .black
         toolbar.items = [
             UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil),
-            UIBarButtonItem(title: "Ok", style: .done, target: onDone.target, action: onDone.action)
+            UIBarButtonItem(title: "OK", style: .done, target: onDone.target, action: onDone.action)
         ]
         toolbar.sizeToFit()
         self.inputAccessoryView = toolbar
