@@ -25,6 +25,7 @@ class NewConsultViewController: UIViewController {
     @IBOutlet weak var selectedCurrenciesCollection: UICollectionView!
     var presenter: NewConsultPresenter?
     weak var delegate: NewConsultViewControllerDelegate?
+    var currencyInserted:Bool = false
     
     var mySelectedCurrency: CurrencyCellViewData?
     
@@ -104,7 +105,7 @@ class NewConsultViewController: UIViewController {
 }
 
 
-extension NewConsultViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension NewConsultViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
@@ -112,8 +113,10 @@ extension NewConsultViewController: UICollectionViewDataSource, UICollectionView
         switch section {
         case 0:
             if let _ = mySelectedCurrency { // Cria a section moeda selecionada
+                currencyInserted = true
                 return 1
-            } else { return 0 }
+            } else {
+                return 0 }
         case 1:
             return 1
         default:
@@ -164,6 +167,16 @@ extension NewConsultViewController: UICollectionViewDataSource, UICollectionView
         
         // Vai para tela selecao de moedas
         self.delegate?.startSelectCurrencyController(self)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if section == 0{
+            if currencyInserted{
+                return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
+            } else{
+                return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            }
+        }
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
 

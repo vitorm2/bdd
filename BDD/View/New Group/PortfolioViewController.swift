@@ -14,7 +14,7 @@ class PortfolioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "Portfolio"
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.

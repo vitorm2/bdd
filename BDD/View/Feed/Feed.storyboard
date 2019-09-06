@@ -10,15 +10,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Feed View Controller-->
         <scene sceneID="VpC-YF-rk5">
             <objects>
-                <viewController storyboardIdentifier="ConsultList" id="iTH-wD-OE6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Feed" id="iTH-wD-OE6" customClass="FeedViewController" customModule="BDD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nQI-SC-3q8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="ConsultList" image="feed-dark-mode" translatesAutoresizingMaskIntoConstraints="NO" id="UhB-A2-dnB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="ConsultList" image="favorite-dark" translatesAutoresizingMaskIntoConstraints="NO" id="UhB-A2-dnB">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -33,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="feed-dark-mode" width="375" height="812"/>
+        <image name="favorite-dark" width="375" height="764.5"/>
     </resources>
 </document>
