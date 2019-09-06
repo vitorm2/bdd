@@ -10,12 +10,15 @@ import Foundation
 import UIKit
 
 class SelectCurrencyCoordinator: Coordinator {
+    var childCoordinators: [Coordinator]
+    
     private var presenter: UINavigationController
     private var newConsultCoordinator: NewConsultCoordinator?
     private var selectCurrencyViewController: SelectCurrencyController?
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
+        self.childCoordinators = []
     }
     func start() {
         if let currencyVC = UIStoryboard(name: "SelectCurrency", bundle: nil)

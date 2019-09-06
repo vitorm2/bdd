@@ -6,7 +6,7 @@
 //  Copyright © 2019 LeonardoBSR. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol Coordinator {
     func start()

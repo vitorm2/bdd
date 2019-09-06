@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class ApplicationCoordinator: Coordinator {
-    private let window: UIWindow
-    private let rootViewController: UINavigationController
+    //private let window: UIWindow
+    let rootViewController: UINavigationController
     private var newConsultCoordinator: NewConsultCoordinator?
-    init(window: UIWindow) {
-        self.window = window
+    init(rootViewController: UINavigationController) {
+        //self.window = window
         //Setting navigation controller
-        rootViewController = UINavigationController()
+        self.rootViewController = rootViewController
         rootViewController.navigationBar.prefersLargeTitles = true
         rootViewController.navigationBar.barTintColor = #colorLiteral(red: 0.07058823529, green: 0.07843137255, blue: 0.1294117647, alpha: 1)
         rootViewController.navigationBar.isTranslucent = false
@@ -28,8 +28,6 @@ class ApplicationCoordinator: Coordinator {
         newConsultCoordinator = NewConsultCoordinator(presenter: rootViewController)
     }
     func start() {
-        window.rootViewController = rootViewController
         newConsultCoordinator?.start()
-        window.makeKeyAndVisible()
     }
 }
