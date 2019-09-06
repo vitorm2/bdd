@@ -2,17 +2,16 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Vector.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Vector@2x.png",
+      "filename" : "bt-central.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Vector@3x.png",
+      "filename" : "bt-central-1.png",
       "scale" : "3x"
     }
   ],

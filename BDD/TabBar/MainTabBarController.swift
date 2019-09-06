@@ -17,7 +17,14 @@ class MainTabBarController: UITabBarController {
         appCoordinator.start()
         listCoordinator.start()
         //each view is a tab item
+//        tabBar.backgroundColor = UIColor(red: 0.07, green: 0.08, blue: 0.13, alpha: 1)
+        tabBar.barTintColor = UIColor(red: 0, green: 0, blue: 0.063, alpha: 1)
         viewControllers = [appCoordinator.rootViewController, listCoordinator.presenter]
+        
+        tabBar.layer.shadowOffset = CGSize.init(width: 0, height: -4)
+        tabBar.layer.shadowRadius = 14
+        tabBar.layer.shadowColor = UIColor.init(red: 0.65, green: 0.45, blue: 1.0, alpha: 1.0).cgColor
+        tabBar.layer.shadowOpacity = 0.1
         // Do any additional setup after loading the view.
     }
     

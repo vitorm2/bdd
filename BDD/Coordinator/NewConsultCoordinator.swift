@@ -26,7 +26,11 @@ class NewConsultCoordinator: Coordinator {
             as? NewConsultViewController {
             
             mainVC.delegate = self
-            mainVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+//            mainVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+            mainVC.tabBarItem = UITabBarItem.init(title: " ", image: UIImage.init(named: "consult-off"), tag: 0)
+            mainVC.tabBarItem.imageInsets.top = -25
+            mainVC.tabBarItem.selectedImage = UIImage.init(named: "consult")
+//            mainVC.tabBarItem.image = UIImage.init(named: "consult")
             presenter.setViewControllers([mainVC], animated: true)
         }
     }

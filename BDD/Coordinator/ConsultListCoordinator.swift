@@ -22,7 +22,10 @@ class ConsultListCoordinator: Coordinator {
             as? UIViewController {
             
             //mainVC.delegate = self
-            mainVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+//            mainVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+            mainVC.tabBarItem = UITabBarItem.init(title: " ", image: UIImage.init(named: "portfolio1"), tag: 1)
+//            mainVC.tabBarItem.image = UIImage.init(named: "portfolio")
+            mainVC.tabBarItem.selectedImage = UIImage.init(named: "portfolio")
             presenter.setViewControllers([mainVC], animated: true)
         }
     }

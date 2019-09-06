@@ -84,7 +84,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="417,84" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bo5-7W-h5y">
-                                                                <rect key="frame" x="0.0" y="18" width="81.333333333333329" height="34"/>
+                                                                <rect key="frame" x="0.0" y="18" width="79.666666666666671" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="vdA-S4-pd3"/>
                                                                 </constraints>
@@ -121,7 +121,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="856,57" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYD-cy-5J9">
-                                                                <rect key="frame" x="0.0" y="18" width="81.333333333333329" height="34"/>
+                                                                <rect key="frame" x="0.0" y="18" width="79.666666666666671" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="2uQ-q7-cpc"/>
                                                                 </constraints>
@@ -144,7 +144,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.713,14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4k-3i-Y1y">
-                                                                <rect key="frame" x="0.0" y="18" width="103.33333333333333" height="34"/>
+                                                                <rect key="frame" x="0.0" y="18" width="101.33333333333333" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="QdY-fH-gjN"/>
                                                                 </constraints>
@@ -195,52 +195,52 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="208,92" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odo-ek-fCv">
-                                        <rect key="frame" x="128" y="395.33333333333331" width="87.333333333333314" height="36.666666666666686"/>
+                                        <rect key="frame" x="128.66666666666666" y="399.33333333333331" width="85.666666666666657" height="32.666666666666686"/>
                                         <fontDescription key="fontDescription" name="Sarabun-Bold" family="Sarabun" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04 SEPTEMBER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ot-ju-70k">
-                                        <rect key="frame" x="117" y="374.33333333333331" width="109.33333333333331" height="21"/>
+                                        <rect key="frame" x="112.66666666666666" y="380.66666666666669" width="117.66666666666666" height="18.666666666666686"/>
                                         <fontDescription key="fontDescription" name="Sarabun-Bold" family="Sarabun" pointSize="16"/>
                                         <color key="textColor" red="0.37254901960784315" green="0.37647058823529411" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAPL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTe-HK-xV4">
-                                        <rect key="frame" x="150.33333333333334" y="129.66666666666666" width="42.666666666666657" height="23.666666666666657"/>
+                                        <rect key="frame" x="149" y="238.33333333333331" width="45" height="21"/>
                                         <fontDescription key="fontDescription" name="Sarabun-Medium" family="Sarabun" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Inc." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFK-M2-TR1">
-                                        <rect key="frame" x="141" y="161.33333333333334" width="61" height="18.333333333333343"/>
+                                        <rect key="frame" x="140" y="267.33333333333331" width="63.333333333333343" height="16.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Sarabun-Medium" family="Sarabun" pointSize="14"/>
                                         <color key="textColor" red="0.72549019609999998" green="0.75686274509999996" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="IOU-LB-GBG">
-                                        <rect key="frame" x="6" y="239.66666666666666" width="331" height="113.66666666666666"/>
+                                        <rect key="frame" x="163.66666666666666" y="343.66666666666669" width="16" height="16"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="QX5-xr-O8I">
-                                        <rect key="frame" x="126.66666666666666" y="39.666666666666671" width="90" height="90.000000000000014"/>
+                                        <rect key="frame" x="126.66666666666666" y="148.33333333333334" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="7rI-qu-Obe"/>
                                             <constraint firstAttribute="height" constant="90" id="UJj-s2-lgX"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bB-fL-L5e">
-                                        <rect key="frame" x="24" y="25" width="17.333333333333329" height="22"/>
+                                        <rect key="frame" x="24" y="25" width="16" height="22"/>
                                         <state key="normal" image="Vector"/>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-LB-tn8">
-                                        <rect key="frame" x="154" y="65.666666666666671" width="35" height="38.000000000000014"/>
+                                        <rect key="frame" x="154" y="174.33333333333334" width="35" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="XFn-dL-Vw8"/>
                                             <constraint firstAttribute="width" constant="35" id="sU9-bP-l0L"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aj7-Pc-Sq0">
-                                        <rect key="frame" x="283" y="25" width="36" height="36"/>
+                                        <rect key="frame" x="303" y="25" width="16" height="22"/>
                                         <state key="normal" image="Close"/>
                                         <connections>
                                             <action selector="backAction:" destination="kK9-4o-2xC" eventType="touchUpInside" id="ASS-tU-M7i"/>
