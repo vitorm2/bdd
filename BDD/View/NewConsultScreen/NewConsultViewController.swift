@@ -48,7 +48,7 @@ class NewConsultViewController: UIViewController {
     @IBAction func researchButtonAction(_ sender: Any) {
         progressIndicator.isHidden = false
         
-        self.presenter?.getConvertStockCurrency(stockCode: stockField.text ?? "AAPL", convertCurrency: mySelectedCurrency?.currency ?? "BRL", quantity: Double(quantityField.text!)!)
+        self.presenter?.getCurrencyValue(stockCode: stockField.text ?? "AAPL", convertCurrency: mySelectedCurrency?.currency ?? "BRL", quantity: Double(quantityField.text!)!)
     }
     
     

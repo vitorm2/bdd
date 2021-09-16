@@ -11,49 +11,52 @@ import Foundation
 
 class NewConsultPresenter {
     weak var consultView: NewConsultView?
-//    var currency: CurrencyViewData?
-//    var stock: Stock?
-
-    //Connect to service (API connectors)
+    
+    let service: APIProcotol
+    
+    init(service: APIProcotol = AlamoFireAPI()) {
+        self.service = service
+    }
 
     func attachView(_ view: NewConsultView) {
         self.consultView = view
     }
 
-    func getConvertStockCurrency(stockCode: String, convertCurrency: String, quantity: Double) {
-        API<[Stock?]>.stock(params: stockCode).request { [weak self] result in
-
-            guard let self = self,
-                case .success(let stocks) = result else { return }
-
-            guard let stockName = stocks[0]?.name else { return }
-            guard let stockPrice = stocks[0]?.price else { return }
-            guard let stockOriginalCurrency = stocks[0]?.currency else { return }
-            guard let marketCap = stocks[0]?.marketCap else { return }
-            guard let changePercent = stocks[0]?.changePct else { return }
-            guard let lastTradeTime = stocks[0]?.lastTradeTime else { return }
-
-            API<[String: String]>.forex(params: stockOriginalCurrency).request { [weak self] result in
-                guard let self = self,
-                    case .success(let currency) = result else { return }
-
-                guard let convertCurrencyValue = currency[convertCurrency] else { return }
-
-                // Conversao
-                let result = Double(stockPrice)! * Double(convertCurrencyValue)!
-
-                let convertResult = ConvertResultViewData(stockTag: stockCode, stockName: stockName, stockOriginalPrice: Double(stockPrice)!,
-                                    stockConvertPrice: result, originalCurrency: stockOriginalCurrency, convertCurrency: convertCurrency, quantity: quantity, marketCap:
-                    marketCap, changePercent: changePercent, lastTradeTime: lastTradeTime)
-
-                self.consultView?.showResultScreen(result: convertResult)
+    func getCurrencyValue(stockCode: String, convertCurrency: String, quantity: Double) {
+        let parameters = APIParameter(endpoint: .stockValue, parameter: stockCode, method: .get)
+        
+        service.makeRequest(parameters: parameters) { (reponse: Result<StockResponse>) in
+            switch reponse {
+            case.success(let stock):
+                
+                let parameters2 = APIParameter(endpoint: .forex, parameter: "USD", method: .get)
+                self.service.makeRequest(parameters: parameters2) { (reponse: Result<ForexResponse>) in
+                    
+                
+                    switch reponse {
+                    case .success(let forex):
+                        guard let convertCurrencyValue = forex.quote[convertCurrency] else { return }
+                        
+                        // Conversao
+                        let result = stock.c * convertCurrencyValue * quantity
+                        
+                        let convertResult = ConvertResultViewData(stockTag: stockCode, stockName: "VMO", stockOriginalPrice: stock.c,
+                                                                  stockConvertPrice: result, originalCurrency: "USD", convertCurrency: convertCurrency, quantity: quantity, marketCap:
+                                                                    "", changePercent: "0.5", lastTradeTime: "")
+                        
+                        self.consultView?.showResultScreen(result: convertResult)
+                    case.failure:
+                        print("ERROR")
+                    }
+                }
+            case.failure:
+                print("ERROR")
             }
         }
     }
 }
 
 struct ConvertResultViewData {
-    
     let stockTag: String
     let stockName: String
     let stockOriginalPrice: Double

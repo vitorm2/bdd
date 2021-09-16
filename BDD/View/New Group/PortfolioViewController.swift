@@ -28,70 +28,11 @@ class PortfolioViewController: UIViewController {
         super.viewDidAppear(animated)
         
         let defaults = UserDefaults()
-        
-        guard let stock = defaults.object(forKey: "stock") as? String else {
-            return
-        }
-        
-        guard let currency = defaults.object(forKey: "currency") as? String else {
-            return
-        }
-        
-        guard let quantity = defaults.object(forKey: "quantity") as? Double else {
-            return
-        }
-        
-        self.getConvertStockCurrency(stockCode: stock, convertCurrency: currency, quantity: quantity)
-    }
-    
-    func getConvertStockCurrency(stockCode: String, convertCurrency: String, quantity: Double) {
-        API<[Stock?]>.stock(params: stockCode).request { [weak self] result in
-            
-            guard let self = self,
-                case .success(let stocks) = result else { return }
-            
-            guard let stockName = stocks[0]?.name else { return }
-            guard let stockPrice = stocks[0]?.price else { return }
-            guard let stockOriginalCurrency = stocks[0]?.currency else { return }
-            guard let marketCap = stocks[0]?.marketCap else { return }
-            guard let changePercent = stocks[0]?.changePct else { return }
-            guard let lastTradeTime = stocks[0]?.lastTradeTime else { return }
-            
-            API<[String: String]>.forex(params: stockOriginalCurrency).request { [weak self] result in
-                guard let self = self,
-                    case .success(let currency) = result else { return }
-                
-                guard let convertCurrencyValue = currency[convertCurrency] else { return }
-                
-                // Conversao
-                let result = Double(stockPrice)! * Double(convertCurrencyValue)!
-                
-                let convertResult = ConvertResultViewData(stockTag: stockCode, stockName: stockName, stockOriginalPrice: Double(stockPrice)!,
-                                                          stockConvertPrice: result, originalCurrency: stockOriginalCurrency, convertCurrency: convertCurrency, quantity: quantity, marketCap:
-                    marketCap, changePercent: changePercent, lastTradeTime: lastTradeTime)
-                
-                self.results.append(convertResult)
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-        }
     }
     
     func formatValueTwoDecimalPoints(value: Double) -> String {
         return String(format: "%.2f", value)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
