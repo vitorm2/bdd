@@ -10,4 +10,5 @@ import Foundation
 
 protocol NewConsultView: NSObjectProtocol {
     func showResultScreen(result: ConvertResultViewData)
+    func showError()
 }

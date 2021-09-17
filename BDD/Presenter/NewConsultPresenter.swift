@@ -37,16 +37,16 @@ class NewConsultPresenter {
                 
                 self?.group.notify(queue: .main, execute: { [weak self] in
                     guard let forex = self?.forexResponse else {
-                        print("ERROR")
+                        self?.consultView?.showError()
                         return
                     }
                     
                     let currencyValue = self?.getCurrencyValue(from: convertCurrency, forex: forex)
                     
-                    if let viewData = self?.createViewData(convertCurrency: convertCurrency, currencyValue: currencyValue, quantity: quantity){
+                    if let viewData = self?.createViewData(convertCurrency: convertCurrency, currencyValue: currencyValue, quantity: quantity) {
                         self?.consultView?.showResultScreen(result: viewData)
                     } else {
-                        print("ERROR")
+                        self?.consultView?.showError()
                     }
                 })
             }
@@ -87,7 +87,7 @@ class NewConsultPresenter {
             case.success(let stock):
                 self?.stockResponse = stock
             case.failure:
-                print("ERROR")
+                self?.consultView?.showError()
             }
             self?.group.leave()
         }
@@ -102,7 +102,7 @@ class NewConsultPresenter {
             case.success(let stockInfo):
                 self?.stockInfoResponse = stockInfo
             case.failure:
-                print("ERROR")
+                self?.consultView?.showError()
             }
             self?.group.leave()
         }
@@ -116,7 +116,7 @@ class NewConsultPresenter {
             case .success(let forex):
                 self?.forexResponse = forex
             case.failure:
-                print("ERROR")
+                print("Failed to get currency values")
             }
             self?.group.leave()
         }

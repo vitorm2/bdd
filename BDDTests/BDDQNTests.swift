@@ -14,24 +14,34 @@ import Nimble
 class ApiOfContentsSpec: QuickSpec {
     var mockAPI: MockAPI!
     var delegateSpy: NewConsultViewControllerDelegateSpy!
+    var viewDelegateSpy: NewConsultViewDelegateSpy!
     
     override func spec() {
+        
+        let app = make()
+        
         // GIVEN
-        describe("O investidor insere o simbolo da ação quer pesquisar, seleciona moeda que deseja converter e a quantidade") {
-            let app = make()
-            
+        describe("O usuário insere o simbolo da ação quer pesquisar") {
             app.stockField.text = "AAPL"
-            app.mySelectedCurrency?.currency = "BRL"
-            app.quantityField.text = "2"
             
-            // WHEN
-            context("Clica no botão pesquisar") {
-                mockAPI.expectedResult = .success
-                app.researchButtonAction(UIButton())
+            describe("seleciona a moeda que deseja converter") {
                 
-                // THEN
-                it ("O aplicativo informa o resultado da conversão de acordo com a quantidade") {
-                    expect(self.delegateSpy.result?.stockTotalPrice).toEventually(beCloseTo(1554.3344, within: 0.1), timeout: 1)
+                app.mySelectedCurrency?.currency = "BRL"
+                
+                describe("informa a quantidade de ações que possui") {
+                    
+                    app.quantityField.text = "2"
+                    
+                    // WHEN
+                    context("clica no botão pesquisar e a busca é efetuada com sucesso") {
+                        mockAPI.expectedResult = .success
+                        app.researchButtonAction(UIButton())
+                        
+                        // THEN
+                        it ("o aplicativo informa o resultado da conversão de acordo com a quantidade") {
+                            expect(self.delegateSpy.result?.stockTotalPrice).toEventually(beCloseTo(1554.3344, within: 0.1), timeout: 1)
+                        }
+                    }
                 }
             }
         }
@@ -42,6 +52,7 @@ class ApiOfContentsSpec: QuickSpec {
     func make() -> NewConsultViewController {
         mockAPI = MockAPI()
         delegateSpy = NewConsultViewControllerDelegateSpy()
+        viewDelegateSpy = NewConsultViewDelegateSpy()
         
         let presenter = NewConsultPresenter(service: mockAPI)
         let bundle = Bundle(for: NewConsultViewController.self)
@@ -54,10 +65,24 @@ class ApiOfContentsSpec: QuickSpec {
         }
         
         sut.delegate = delegateSpy
+        presenter.attachView(viewDelegateSpy)
         sut.presenter = presenter
         sut.loadViewIfNeeded()
         
         return sut
+    }
+}
+
+class NewConsultViewDelegateSpy: UIView, NewConsultView {
+    var showResultScreenCalled = false
+    var showErrorCalled = false
+    
+    func showResultScreen(result: ConvertResultViewData) {
+        showResultScreenCalled = true
+    }
+    
+    func showError() {
+        showErrorCalled = true
     }
 }
 

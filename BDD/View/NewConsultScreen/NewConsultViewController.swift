@@ -203,6 +203,11 @@ extension NewConsultViewController: NewConsultView {
         // vai pra tela de resultados
         self.delegate?.startResultController(self, result: result)
     }
+    
+    func showError() {
+        progressIndicator.isHidden = true
+        print("ERROR")
+    }
 }
 
 
