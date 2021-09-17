@@ -14,6 +14,11 @@ class NewConsultPresenter {
     
     let service: APIProcotol
     
+    let group = DispatchGroup()
+    var stockResponse: StockResponse?
+    var stockInfoResponse: StockInformationResponse?
+    var forexResponse: ForexResponse?
+    
     init(service: APIProcotol = AlamoFireAPI()) {
         self.service = service
     }
@@ -21,38 +26,108 @@ class NewConsultPresenter {
     func attachView(_ view: NewConsultView) {
         self.consultView = view
     }
-
-    func getCurrencyValue(stockCode: String, convertCurrency: String, quantity: Double) {
-        let parameters = APIParameter(endpoint: .stockValue, parameter: stockCode, method: .get)
+    
+    func fetchConvercyConvertableValue(stockCode: String, convertCurrency: String, quantity: Double) {
+        fetchStockValue(stockCode: stockCode)
+        fetchStockInformation(stockCode: stockCode)
         
-        service.makeRequest(parameters: parameters) { (reponse: Result<StockResponse>) in
-            switch reponse {
-            case.success(let stock):
+        group.notify(queue: .main, execute: { [weak self] in
+            if let stockCurrency = self?.stockInfoResponse?.results.first?.currency_name  {
+                self?.fetchCurrencyValues(stockCurrency: stockCurrency)
                 
-                let parameters2 = APIParameter(endpoint: .forex, parameter: "USD", method: .get)
-                self.service.makeRequest(parameters: parameters2) { (reponse: Result<ForexResponse>) in
+                self?.group.notify(queue: .main, execute: { [weak self] in
+                    guard let forex = self?.forexResponse else {
+                        print("ERROR")
+                        return
+                    }
                     
-                
-                    switch reponse {
-                    case .success(let forex):
-                        guard let convertCurrencyValue = forex.quote[convertCurrency] else { return }
-                        
-                        // Conversao
-                        let result = stock.c * convertCurrencyValue * quantity
-                        
-                        let convertResult = ConvertResultViewData(stockTag: stockCode, stockName: "VMO", stockOriginalPrice: stock.c,
-                                                                  stockConvertPrice: result, originalCurrency: "USD", convertCurrency: convertCurrency, quantity: quantity, marketCap:
-                                                                    "", changePercent: "0.5", lastTradeTime: "")
-                        
-                        self.consultView?.showResultScreen(result: convertResult)
-                    case.failure:
+                    let currencyValue = self?.getCurrencyValue(from: convertCurrency, forex: forex)
+                    
+                    if let viewData = self?.createViewData(convertCurrency: convertCurrency, currencyValue: currencyValue, quantity: quantity){
+                        self?.consultView?.showResultScreen(result: viewData)
+                    } else {
                         print("ERROR")
                     }
-                }
+                })
+            }
+        })
+        
+    }
+    
+    func createViewData(convertCurrency: String, currencyValue: Double?, quantity: Double) -> ConvertResultViewData {
+        guard let stockValue = stockResponse?.c, let stockInfo = stockInfoResponse?.results.first, let currencyValue = currencyValue else {
+            fatalError()
+        }
+        
+        let result = stockValue * currencyValue
+        
+        let convertResult = ConvertResultViewData(stockTag: stockInfo.ticker,
+                                                  stockName: stockInfo.name,
+                                                  stockOriginalPrice: stockValue,
+                                                  stockConvertPrice: result,
+                                                  stockTotalPrice: result * quantity,
+                                                  originalCurrency: stockInfo.currency_name,
+                                                  convertCurrency: convertCurrency,
+                                                  quantity: quantity,
+                                                  marketCap: "",
+                                                  changePercent: "0.5",
+                                                  lastTradeTime: "")
+        
+        
+        return convertResult
+        
+    }
+
+    func fetchStockValue(stockCode: String) {
+        group.enter()
+        let parameters = APIParameter(endpoint: .stockValue(stockCode), method: .get)
+        
+        service.makeRequest(parameters: parameters) { [weak self] (reponse: Result<StockResponse>) in
+            switch reponse {
+            case.success(let stock):
+                self?.stockResponse = stock
             case.failure:
                 print("ERROR")
             }
+            self?.group.leave()
         }
+    }
+    
+    func fetchStockInformation(stockCode: String)  {
+        group.enter()
+        let parameters = APIParameter(endpoint: .stockInfo(stockCode), method: .get)
+        
+        service.makeRequest(parameters: parameters) { [weak self] (reponse: Result<StockInformationResponse>) in
+            switch reponse {
+            case.success(let stockInfo):
+                self?.stockInfoResponse = stockInfo
+            case.failure:
+                print("ERROR")
+            }
+            self?.group.leave()
+        }
+    }
+    
+    func fetchCurrencyValues(stockCurrency: String) {
+        group.enter()
+        let parameters = APIParameter(endpoint: .forex(stockCurrency), method: .get)
+        self.service.makeRequest(parameters: parameters) { [weak self] (reponse: Result<ForexResponse>) in
+            switch reponse {
+            case .success(let forex):
+                self?.forexResponse = forex
+            case.failure:
+                print("ERROR")
+            }
+            self?.group.leave()
+        }
+    }
+    
+    func getCurrencyValue(from symbol: String, forex: ForexResponse) -> Double? {
+        guard let currencyValue = forex.quote[symbol] else {
+            return nil
+        }
+        
+        return currencyValue
     }
 }
 
@@ -61,6 +136,7 @@ struct ConvertResultViewData {
     let stockName: String
     let stockOriginalPrice: Double
     let stockConvertPrice: Double
+    let stockTotalPrice: Double
     let originalCurrency: String
     let convertCurrency: String
     let quantity: Double

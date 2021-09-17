@@ -23,7 +23,7 @@ class NewConsultViewController: UIViewController {
     
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     @IBOutlet weak var selectedCurrenciesCollection: UICollectionView!
-    var presenter: NewConsultPresenter?
+    var presenter: NewConsultPresenter? = NewConsultPresenter()
     weak var delegate: NewConsultViewControllerDelegate?
     var currencyInserted:Bool = false
     
@@ -32,7 +32,6 @@ class NewConsultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.presenter = NewConsultPresenter()
         self.presenter?.attachView(self)
         //Set textinput layout
         setTextFieldsLayout()
@@ -48,7 +47,7 @@ class NewConsultViewController: UIViewController {
     @IBAction func researchButtonAction(_ sender: Any) {
         progressIndicator.isHidden = false
         
-        self.presenter?.getCurrencyValue(stockCode: stockField.text ?? "AAPL", convertCurrency: mySelectedCurrency?.currency ?? "BRL", quantity: Double(quantityField.text!)!)
+        self.presenter?.fetchConvercyConvertableValue(stockCode: stockField.text ?? "AAPL", convertCurrency: mySelectedCurrency?.currency ?? "BRL", quantity: Double(quantityField.text!)!)
     }
     
     

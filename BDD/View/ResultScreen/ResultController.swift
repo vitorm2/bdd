@@ -51,7 +51,7 @@ class ResultController: UIViewController {
             quantityConverCurrenct.text = "Quantity: " + String(Int(result.quantity))
             resultConvertCurrency.text = formatValueTwoDecimalPoints(value: result.stockConvertPrice * result.quantity)
             
-            originalFlag.image = UIImage(named: result.originalCurrency)
+            originalFlag.image = UIImage(named: result.originalCurrency.uppercased())
             quantityOriginalCurrency.text = "Quantity: " + String(Int(result.quantity))
             resultOriginalCurrency.text = formatValueTwoDecimalPoints(value: result.stockOriginalPrice * result.quantity)
             

@@ -13,25 +13,42 @@ protocol APIProcotol {
     func makeRequest<T: Decodable>(parameters: APIParameter, completion: @escaping (Result<T>) -> Void)
 }
 
-enum Endpoint: String {
-    case stockValue = "/quote?symbol="
-    case forex = "/forex/rates?base="
+enum Endpoint {
+    case stockValue(String)
+    case stockInfo(String)
+    case forex(String)
+
+    var path: String {
+        switch self {
+        case  .stockValue(let symbol):
+            return finnhubBaseURL  + "/quote?symbol=" + symbol + token
+        case .stockInfo(let symbol):
+            return polygonBaseURL + "v3/reference/tickers?ticker=\(symbol)&active=true&sort=ticker&order=asc&limit=1" + apiKey
+        case .forex(let currency):
+            return finnhubBaseURL  + "/forex/rates?base=" + currency + token
+        }
+    }
+    
+    private var polygonBaseURL: String {
+        return "https://api.polygon.io/"
+    }
+
+    private var finnhubBaseURL: String {
+        return "https://finnhub.io/api/v1"
+    }
+
+    private var token: String {
+        return "&token=sandbox_c51uh9aad3i9nnbv2et0"
+    }
+
+    private var apiKey: String {
+        return "&apiKey=tgCj9L4t_tvp9pvDmLNWvtawNQmR5FTy"
+    }
 }
 
 struct APIParameter {
     let endpoint: Endpoint
-    let parameter: String
     let method: HTTPMethod
-}
-
-extension APIParameter {
-    var url: String {
-        return "https://finnhub.io/api/v1" + endpoint.rawValue + parameter + token
-    }
-    
-    private var token: String {
-        return "&token=sandbox_c5190giad3if5950sibg"
-    }
 }
 
 enum Result<T> {
@@ -41,14 +58,14 @@ enum Result<T> {
 
 class AlamoFireAPI: APIProcotol {
     func makeRequest<T: Decodable>(parameters: APIParameter, completion: @escaping (Result<T>) -> Void) {
-        AF.request(parameters.url, method: parameters.method).response { response in
+        AF.request(parameters.endpoint.path, method: parameters.method).response { response in
             switch response.result {
             case .success(let responseData):
                 guard let data = responseData else {
                     completion(.failure(response.error))
                     return
                 }
-                
+
                 do {
                     let decodedData = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(decodedData))
@@ -56,7 +73,7 @@ class AlamoFireAPI: APIProcotol {
                     completion(.failure(response.error))
                     return
                 }
-                
+
             case .failure(let error):
                 completion(.failure(error))
             }
